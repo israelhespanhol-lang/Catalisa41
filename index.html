@@ -1,341 +1,557 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-39SQ0ZTCN3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-39SQ0ZTCN3');
+  </script>
+
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Catalisa41 — Fronteira de Negócios. Imersão empresarial no Paraguai 2026.">
-  <meta name="theme-color" content="#08050f">
-  <link rel="icon" type="image/png" href="./favicon.png">
-  <link rel="apple-touch-icon" href="./favicon.png">
-  <title>Catalisa41 | Fronteira de Negócios — Paraguai 2026</title>
-  <script src="./tracking-config.js"></script>
-  <style>
-    :root{--bg:#08050f;--panel:#100a1b;--panel2:#160d25;--violet:#9b45ff;--violet2:#6e2ce7;--pink:#d69aff;--text:#f8f5ff;--muted:#bbb2ca;--line:rgba(190,135,255,.2)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
-    .nav{height:76px;padding:0 max(22px,5vw);display:flex;align-items:center;justify-content:space-between;background:rgba(8,5,15,.9);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;backdrop-filter:blur(15px)}
-    .brand{font-weight:900;letter-spacing:-.04em;font-size:20px}.brand span{color:var(--violet)}.nav-links{display:flex;gap:28px;color:var(--muted);font-size:13px}.nav-cta,.button{background:linear-gradient(135deg,var(--violet),var(--violet2));padding:14px 20px;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;box-shadow:0 12px 38px rgba(130,52,235,.24)}
-    .hero-section {display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px;max-width:1300px;margin:0 auto;padding:60px max(22px,5vw) 100px;min-height:85vh}
-    .hero-image{position:relative;width:100%;order:2}
-    .hero-image img{width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.5))}
-    .hero-copy{position:relative;padding:0;order:1;max-width:600px}
-    .eyebrow{font-size:11px;color:var(--pink);letter-spacing:.25em;text-transform:uppercase;font-weight:800}
-    h1{font-size:clamp(3rem,6vw,5.5rem);line-height:.9;letter-spacing:-.05em;margin:22px 0 28px}h1 span{color:var(--pink);text-shadow: 0 4px 20px rgba(214,154,255,0.4)}
-    .lead{font-size:clamp(16px,1.8vw,20px);line-height:1.7;color:var(--muted)}.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.button.secondary{background:transparent;border:1px solid var(--line);box-shadow:none}
-    section{padding:100px max(22px,7vw)}.section-label{color:var(--pink);font-size:11px;letter-spacing:.23em;font-weight:800;text-transform:uppercase}.section-title{font-size:clamp(2.3rem,5vw,4.8rem);letter-spacing:-.055em;line-height:1.02;margin:18px 0 50px}.section-title span{color:var(--pink)}
-    .experience{background:var(--panel)}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:30px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(155,69,255,.09),rgba(255,255,255,.015));border-radius:16px}.feature b{display:block;color:var(--pink);font-size:13px;margin-bottom:15px}.feature h3{font-size:23px;margin:0 0 12px}.feature p{color:var(--muted);line-height:1.65;margin:0}
-    .route{background:linear-gradient(180deg,#08050f,#10091a)}.route-card{max-width:1000px;border:1px solid var(--line);border-radius:18px;padding:40px;background:rgba(255,255,255,.025);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:28px}.city small{display:block;color:var(--pink);letter-spacing:.18em}.city strong{font-size:clamp(2rem,5vw,4.5rem)}.city:last-child{text-align:right}.flight{color:var(--pink);font-size:30px}
-    .hotels{background:var(--panel)}.hotel-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.hotel{min-height:430px;padding:38px;border-radius:18px;border:1px solid var(--line);background-image:linear-gradient(180deg,transparent 20%,rgba(8,5,15,.96) 88%),var(--hotel-image);background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;transition:transform .3s,border-color .3s;position:relative;overflow:hidden}.hotel:hover{transform:translateY(-5px);border-color:rgba(190,123,255,.65)}.hotel small{color:var(--pink);letter-spacing:.15em}.hotel h3{font-size:clamp(1.8rem,3vw,3rem);margin:12px 0}.hotel p{color:var(--muted);line-height:1.6;max-width:540px}.hotel .view{margin-top:12px;color:white;font-size:12px;font-weight:800;letter-spacing:.1em}.gallery{position:fixed;inset:0;background:rgba(3,1,8,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(10px)}.gallery.open{display:flex}.gallery-panel{width:min(1000px,96vw);max-height:92vh;overflow:auto;background:#100a1b;border:1px solid var(--line);border-radius:18px;padding:22px}.gallery-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.gallery-head h3{margin:0;font-size:24px}.gallery-close{border:1px solid var(--line);background:transparent;color:white;width:44px;height:44px;border-radius:50%;cursor:pointer}.gallery-main{width:100%;height:min(62vh,600px);object-fit:contain;background:#05030b;border-radius:12px}.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:12px}.thumbs button{padding:0;border:2px solid transparent;background:none;border-radius:8px;overflow:hidden;cursor:pointer}.thumbs button.active{border-color:var(--violet)}.thumbs img{width:100%;height:80px;object-fit:cover}
-    .pricing{background:radial-gradient(circle at 50% 0,rgba(142,53,245,.17),transparent 35%),#08050f}.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1100px;margin:auto}.price-card{border:1px solid var(--line);background:linear-gradient(145deg,#130b20,#0d0815);border-radius:20px;padding:40px;position:relative;overflow:hidden}.price-card.featured{border-color:rgba(190,123,255,.65);box-shadow:0 25px 80px rgba(118,37,220,.18)}.badge{position:absolute;right:0;top:0;background:var(--violet);font-size:10px;font-weight:900;padding:10px 14px;letter-spacing:.12em}.price-card>small{color:var(--pink);font-weight:800;letter-spacing:.15em}.price-card h3{font-size:24px;margin:12px 0}.price{font-size:clamp(3rem,6vw,5.2rem);font-weight:900;letter-spacing:-.07em;margin:28px 0 6px}.per{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em}.price-card ul{padding:0;list-style:none;margin:30px 0}.price-card li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07);color:#ddd5ea}.price-card li:before{content:"✓";color:var(--pink);font-weight:900;margin-right:10px}
-    /* Visitas Tecnicas */
-    .visitas{background:var(--panel2);position:relative}
-    .visitas-box{max-width:1160px;margin:0 auto;border:1px solid var(--line);border-radius:24px;background:linear-gradient(150deg,#120923 0%,#090513 100%);display:grid;grid-template-columns:1fr 1.15fr;box-shadow:0 30px 90px rgba(0,0,0,.5);overflow:hidden;position:relative}
-    .visitas-copy{padding:60px 50px;display:flex;flex-direction:column;justify-content:center;position:relative;background:radial-gradient(circle at 10% 20%,rgba(155,69,255,.18),transparent 65%)}
-    .visitas-copy .section-label{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:30px;margin-bottom:24px;background:rgba(155,69,255,.12);width:fit-content}
-    .visitas-copy h2{font-size:clamp(2.4rem,4.5vw,4.2rem);line-height:1.02;letter-spacing:-.05em;margin:0 0 22px}
-    .visitas-copy h2 span{color:var(--pink);text-shadow:0 4px 25px rgba(214,154,255,.35)}
-    .visitas-copy p{color:var(--muted);font-size:16px;line-height:1.75;margin:0;max-width:440px}
-    .visitas-list-wrap{padding:50px 45px;background:rgba(255,255,255,.015);border-left:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;gap:16px}
-    .visita-item{display:flex;align-items:center;gap:20px;padding:16px 20px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(190,135,255,.12);transition:all .3s ease}
-    .visita-item:hover{background:rgba(155,69,255,.1);border-color:rgba(190,135,255,.4);transform:translateX(6px)}
-    .visita-icon{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,rgba(155,69,255,.3),rgba(110,44,231,.15));border:1px solid rgba(214,154,255,.35);display:flex;align-items:center;justify-content:center;color:var(--pink);flex-shrink:0;box-shadow:0 8px 24px rgba(130,52,235,.2)}
-    .visita-text{font-size:clamp(15px,1.3vw,18px);font-weight:700;color:#fff;letter-spacing:-.01em}
-    /* Incluso e Nao Incluso */
-    .inclusion-section{margin-top:80px;padding-top:40px;border-top:1px solid rgba(190,135,255,.15)}
-    .inclusion-header{text-align:center;margin-bottom:35px}
-    .inclusion-tabs{display:flex;justify-content:center;gap:10px;margin-top:25px;flex-wrap:wrap}
-    .tab-btn{background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);padding:11px 22px;border-radius:30px;font-size:13px;font-weight:700;cursor:pointer;transition:all .25s ease;font-family:inherit}
-    .tab-btn:hover{color:#fff;border-color:var(--pink)}
-    .tab-btn.active{background:linear-gradient(135deg,var(--violet),var(--violet2));color:#fff;border-color:transparent;box-shadow:0 6px 25px rgba(130,52,235,.35)}
-    .inclusion-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:26px;max-width:1100px;margin:0 auto}
-    .inclusion-card{border-radius:20px;padding:38px;border:1px solid var(--line);position:relative;background:linear-gradient(145deg,#120a21,#0c0716);transition:all .3s ease}
-    .inclusion-card.included{border-color:rgba(190,135,255,.4);box-shadow:0 20px 60px rgba(130,52,235,.12)}
-    .inclusion-card.not-included{border-color:rgba(255,255,255,.08);background:linear-gradient(145deg,#0e0817,#090510)}
-    .inc-card-head{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.08)}
-    .inc-badge{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px}
-    .inc-badge.check{background:rgba(155,69,255,.25);color:var(--pink);border:1px solid rgba(214,154,255,.4);box-shadow:0 0 15px rgba(214,154,255,.2)}
-    .inc-badge.cross{background:rgba(255,100,100,.12);color:#ff9e9e;border:1px solid rgba(255,100,100,.3)}
-    .inc-title h4{margin:0;font-size:22px;font-weight:800;letter-spacing:-.02em}
-    .inc-title small{color:var(--muted);font-size:12px;display:block;margin-top:2px}
-    .inc-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:15px}
-    .inc-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:#ece5f7;line-height:1.5}
-    .inc-list li .bullet{font-weight:900;font-size:14px;line-height:1.4}
-    .inc-list.check-list li .bullet{color:var(--pink)}
-    .inc-list.cross-list li .bullet{color:#ff9e9e}
-    .inc-list.cross-list li{color:var(--muted)}
-    .partners{background:var(--panel);text-align:center}.partner-box{border:1px solid var(--line);border-radius:20px;padding:52px;background:linear-gradient(145deg,rgba(155,69,255,.1),transparent);max-width:1000px;margin:auto}.partner-names{display:flex;justify-content:center;align-items:center;gap:30px}.partner-names img{width:min(260px,34vw);height:105px;object-fit:contain;filter:drop-shadow(0 15px 28px rgba(0,0,0,.3))}.partner-names i{color:var(--violet);font-style:normal;font-size:30px}.partner-box p{color:var(--muted);line-height:1.7;max-width:670px;margin:22px auto 0}
-    .closing{text-align:center;padding-top:130px;padding-bottom:130px}.closing .section-title{max-width:900px;margin:18px auto 35px}.closing p{color:var(--muted);margin-bottom:35px}footer{padding:36px max(22px,7vw);border-top:1px solid var(--line);color:var(--muted);display:flex;justify-content:space-between;font-size:12px}
-    @media(max-width:950px){.hero-section{grid-template-columns:1fr;padding-top:40px;min-height:auto;gap:30px}.hero-image{order:1}.hero-copy{order:2;max-width:100%}.visitas-box{grid-template-columns:1fr}.visitas-list-wrap{border-left:none;border-top:1px solid var(--line);padding:35px 24px}.visitas-copy{padding:40px 24px}.inclusion-grid{grid-template-columns:1fr}}
-    @media(max-width:760px){.nav-links{display:none}.nav{height:68px}.nav-cta{padding:11px 13px;font-size:10px}h1{font-size:3.4rem}.feature-grid,.hotel-grid,.price-grid{grid-template-columns:1fr}.route-card{grid-template-columns:1fr;text-align:left;padding:28px}.city:last-child{text-align:left}.flight{transform:rotate(90deg);width:30px}.price-card{padding:30px 24px}.partner-box{padding:38px 20px}.partner-names{flex-direction:column;gap:14px}section{padding-top:75px;padding-bottom:75px}footer{flex-direction:column;gap:10px}.inclusion-card{padding:28px 20px}.tab-btn{padding:9px 15px;font-size:11px}}
-  </style>
+  <meta name="theme-color" content="#063f46">
+  <meta name="description" content="Fronteira de Negócios — imersão empresarial no Paraguai, de 16 a 21 de outubro de 2026.">
+  <title>Fronteira de Negócios | Paraguai 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23063f46'/%3E%3Cpath d='M15 17h35v9H26v7h20v9H26v13H15z' fill='%2386d9e7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="experience.css">
+  <link rel="stylesheet" href="gatekeeper.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="#inicio">CATALISA<span>41</span></a>
-    <nav class="nav-links"><a href="#experiencia">Experiência</a><a href="#hoteis">Hotéis</a><a href="#visitas">Visitas técnicas</a><a href="#investimento">Investimento</a><a href="#parceria">Parceria</a></nav>
-    <a class="nav-cta track-contact" href="https://wa.me/5511911083333?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20Fronteira%20de%20Negócios." target="_blank" rel="noopener">Tenho interesse ↗</a>
+  <a class="skip-link" href="#experiencia">Pular para o conteúdo</a>
+  <div class="intro" aria-hidden="true"><div class="intro-mark"><span>F</span><b>ATRAVESSE</b></div><div class="intro-line"></div></div>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Fronteira de Negócios — início"><span>F</span><b>FRONTEIRA</b><small>DE NEGÓCIOS</small></a>
+    <nav aria-label="Navegação principal">
+      <a href="#experiencia">Experiência</a><a href="#hospedagem">Hospedagem</a><a href="#visitas">Visitas Técnicas</a><a href="#investimento">Investimento</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="nav-whatsapp" href="https://wa.me/5511911083333?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20equipe%20da%20imers%C3%A3o%20Fronteira%20de%20Neg%C3%B3cios" target="_blank" rel="noopener noreferrer" aria-label="Atendimento via WhatsApp (11) 91108-3333">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <a class="nav-cta" href="#investimento">Quero participar</a>
+    </div>
   </header>
 
-  <main id="inicio">
-    <div class="hero-section">
-      <div class="hero-image" aria-label="Anfitriões da Fronteira de Negócios">
-        <img src="./hero-catalisa41.png" alt="Anfitriões diante da bandeira do Paraguai">
-      </div>
-      <section class="hero-copy">
-        <div class="eyebrow">Edição Paraguai · 2026</div>
-        <h1>Fronteira<br><span>de Negócios</span></h1>
-        <p class="lead">Uma imersão empresarial para quem quer conhecer o país, ampliar horizontes e construir negócios sem fronteiras.</p>
+  <main>
+    <section class="hero">
+      <div class="hero-noise"></div>
+      <div class="hero-word" aria-hidden="true">FRONTEIRA</div>
+      <div class="coordinates" aria-hidden="true">25°30′S&nbsp;&nbsp;54°36′W</div>
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> 16—21 OUT 2026 · PARAGUAI</div>
+        <h1>Seu próximo<br>movimento.<br><em>Sem fronteiras.</em></h1>
+        <p>Uma imersão empresarial para enxergar mercados de perto, gerar conexões relevantes e transformar oportunidades em movimento.</p>
         <div class="hero-actions">
-          <a class="button track-contact" href="https://wa.me/5511911083333?text=Olá!%20Quero%20garantir%20meu%20interesse%20na%20Fronteira%20de%20Negócios." target="_blank" rel="noopener">Garantir meu interesse ↗</a>
-          <a class="button secondary" href="#experiencia">Explorar a jornada ↓</a>
+          <a class="button primary" href="#experiencia">Conheça a imersão</a>
+          <a class="text-link" href="#investimento">Ver investimento <span>↗</span></a>
+          <a class="hero-whatsapp-btn" href="https://wa.me/5511911083333?text=Ol%C3%A1%2C%20estava%20visualizando%20a%20imers%C3%A3o%20Fronteira%20de%20Neg%C3%B3cios%20Paraguai%202026%20e%20gostaria%20de%20tirar%20d%C3%BAvidas" target="_blank" rel="noopener noreferrer" aria-label="Tirar dúvidas no WhatsApp">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>Tirar dúvidas no WhatsApp ↗</span>
+          </a>
         </div>
-      </section>
-    </div>
+        <div class="hero-proof"><strong>6 dias</strong><i></i><strong>2 cidades</strong><i></i><strong>experiências reais</strong></div>
+      </div>
+      <div class="hero-visual reveal delay">
+        <div class="portal-shell"><span class="portal-label">PASSAPORTE PARA NOVOS MERCADOS</span><div class="portrait-frame"><img src="assets/mentor.jpeg" alt="Anfitrião da imersão Fronteira de Negócios"></div><div class="passport-stamp"><b>PARAGUAI</b><span>16 · 10 · 26</span></div></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-card"><span>IMERSÃO</span><strong>Paraguai<br>2026</strong></div>
+      </div>
+      <a class="scroll-cue" href="#experiencia" aria-label="Rolar para a experiência"><span></span> DESCUBRA</a>
+    </section>
 
-    <section class="experience" id="experiencia">
-      <div class="section-label">01 · A experiência</div>
-      <h2 class="section-title">Muito além de uma viagem.<br><span>Uma jornada de expansão.</span></h2>
-      <div class="feature-grid">
-        <article class="feature"><b>01</b><h3>Visão de mercado</h3><p>Contato direto com empresas, lideranças e oportunidades do ambiente empresarial paraguaio.</p></article>
-        <article class="feature"><b>02</b><h3>Conexões reais</h3><p>Networking cuidadosamente construído para gerar relacionamentos e possibilidades concretas.</p></article>
-        <article class="feature"><b>03</b><h3>Experiência completa</h3><p>Logística, hospedagem e acompanhamento pensados para uma jornada segura e produtiva.</p></article>
+    <div class="ticker" aria-hidden="true"><div>ESTRATÉGIA <span>✦</span> CONEXÃO <span>✦</span> MERCADO <span>✦</span> EXPERIÊNCIA <span>✦</span> ESTRATÉGIA <span>✦</span> CONEXÃO <span>✦</span> MERCADO <span>✦</span> EXPERIÊNCIA <span>✦</span></div></div>
+
+    <section class="manifesto" id="experiencia">
+      <div class="section-index">01 · A EXPERIÊNCIA</div>
+      <div class="manifesto-copy reveal"><p class="kicker">Muito além de uma viagem empresarial</p><h2>Veja como negócios acontecem <span>do outro lado da fronteira.</span></h2></div>
+      <p class="manifesto-body reveal">Uma agenda desenhada para quem quer compreender o mercado paraguaio por dentro: visitas técnicas, conversas estratégicas, gastronomia e networking em ambientes que aproximam pessoas e ideias.</p>
+      <div class="stats reveal"><div><b>4</b><span>refeições de<br>networking</span></div><div><b>4</b><span>visitas<br>técnicas</span></div><div><b>2</b><span>bases<br>estratégicas</span></div><div><b>1</b><span>nova visão<br>de mercado</span></div></div>
+    </section>
+
+    <section class="crossing" aria-label="A jornada da imersão">
+      <div class="crossing-pin">
+        <div class="crossing-copy">
+          <span class="chapter-count">A JORNADA / 03 ATOS</span>
+          <h2>Uma travessia que muda<br><em>o seu ponto de vista.</em></h2>
+          <p id="chapterText">Você sai do lugar conhecido para observar novos modelos, novas relações e novas possibilidades.</p>
+          <div class="chapter-controls" aria-label="Capítulos da jornada"><button type="button" data-chapter="0" aria-pressed="true">01 <span>Descobrir</span></button><button type="button" data-chapter="1" aria-pressed="false">02 <span>Conectar</span></button><button type="button" data-chapter="2" aria-pressed="false">03 <span>Expandir</span></button></div>
+        </div>
+        <div class="crossing-stage" aria-hidden="true">
+          <div class="stage-grid"></div>
+          <div class="country country-br"><small>ORIGEM</small><b>BRASIL</b></div>
+          <div class="border-line"><span></span><i></i></div>
+          <div class="country country-py"><small>DESTINO</small><b>PARAGUAI</b></div>
+          <div class="stage-marker"><b>F</b><span>01</span></div>
+        </div>
+      </div>
+      <div class="chapter" data-step="01" data-copy="Você sai do lugar conhecido para observar novos modelos, novas relações e novas possibilidades."></div>
+      <div class="chapter" data-step="02" data-copy="No caminho, encontros qualificados transformam informação em repertório e contatos em conexões reais."></div>
+      <div class="chapter" data-step="03" data-copy="Você volta com referências práticas, visão ampliada e caminhos concretos para os próximos negócios."></div>
+    </section>
+
+
+
+    <section class="stays" id="hospedagem">
+      <!-- Decoração de ondas fluidas teal nos cantos -->
+      <div class="stays-decor stays-decor-tl" aria-hidden="true">
+        <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-50 -50 C 180 50, 100 260, -50 340 Z" fill="url(#tealWave1)" opacity="0.4"/>
+          <path d="M-50 -50 C 290 -10, 240 180, -50 250 Z" fill="url(#tealWave2)" opacity="0.65"/>
+          <path d="M-50 -50 C 370 -50, 330 90, -50 170 Z" fill="url(#tealWave3)" opacity="0.85"/>
+          <defs>
+            <linearGradient id="tealWave1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#042a30"/>
+              <stop offset="100%" stop-color="#196b78"/>
+            </linearGradient>
+            <linearGradient id="tealWave2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#063f46"/>
+              <stop offset="100%" stop-color="#248796"/>
+            </linearGradient>
+            <linearGradient id="tealWave3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#074852"/>
+              <stop offset="100%" stop-color="#115c67"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="stays-decor stays-decor-br" aria-hidden="true">
+        <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M650 450 C 420 350, 500 140, 650 60 Z" fill="url(#tealWaveBr1)" opacity="0.4"/>
+          <path d="M650 450 C 310 410, 360 220, 650 150 Z" fill="url(#tealWaveBr2)" opacity="0.65"/>
+          <path d="M650 450 C 230 450, 270 310, 650 230 Z" fill="url(#tealWaveBr3)" opacity="0.85"/>
+          <defs>
+            <linearGradient id="tealWaveBr1" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#042a30"/>
+              <stop offset="100%" stop-color="#196b78"/>
+            </linearGradient>
+            <linearGradient id="tealWaveBr2" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#063f46"/>
+              <stop offset="100%" stop-color="#248796"/>
+            </linearGradient>
+            <linearGradient id="tealWaveBr3" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#074852"/>
+              <stop offset="100%" stop-color="#115c67"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="stays-heading reveal">
+        <div class="section-index">02 · SUAS BASES</div>
+        <h2>Suas bases de conforto e estratégia</h2>
+      </div>
+
+      <div class="stays-grid">
+        <!-- Hotel 1: Rio Hotel by Bourbon -->
+        <article class="stay-capsule-card reveal">
+          <div class="stay-capsule">
+            <header class="capsule-header">
+              <h3>Rio Hotel by<br>Bourbon</h3>
+            </header>
+            <div class="stay-image">
+              <img src="assets/rio-hotel.jpg" alt="Fachada do Rio Hotel by Bourbon" loading="lazy">
+            </div>
+            <footer class="capsule-footer">
+              <span>CIUDAD DEL ESTE</span>
+            </footer>
+          </div>
+          <ul class="stay-features">
+            <li>Acesso facilitado aos polos comerciais.</li>
+            <li>Ambientes modernos e áreas funcionais.</li>
+            <li>Restaurantes, bar e academia.</li>
+            <li>A base perfeita para a programação principal.</li>
+          </ul>
+        </article>
+
+        <!-- Hotel 2: Dazzler by Wyndham -->
+        <article class="stay-capsule-card reveal">
+          <div class="stay-capsule">
+            <header class="capsule-header">
+              <h3>Dazzler by<br>Wyndham</h3>
+            </header>
+            <div class="stay-image">
+              <img src="assets/dazzler.jpg" alt="Fachada noturna do Dazzler by Wyndham" loading="lazy">
+            </div>
+            <footer class="capsule-footer">
+              <span>ASSUNÇÃO</span>
+            </footer>
+          </div>
+          <ul class="stay-features">
+            <li>Infraestrutura contemporânea e sofisticada.</li>
+            <li>Piscina, academia e alta conectividade.</li>
+            <li>Proximidade aos compromissos e a gastronomia.</li>
+            <li>O refúgio ideal na capital paraguaia.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
-    <section class="route">
-      <div class="section-label">02 · Experiência aérea oficial</div>
-      <h2 class="section-title">Da origem ao destino,<br><span>tudo conectado.</span></h2>
-      <div class="route-card"><div class="city"><small>SAÍDA</small><strong>Florianópolis</strong></div><div class="flight">✈</div><div class="city"><small>DESTINO</small><strong>Paraguai</strong></div></div>
-    </section>
+    <section class="networking">
+      <!-- Decoração geométrica facetada no canto inferior esquerdo -->
+      <div class="networking-decor-bl" aria-hidden="true">
+        <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="0,220 0,60 160,220" fill="url(#netFacet1)" opacity="0.3"/>
+          <polygon points="0,220 0,120 100,220" fill="url(#netFacet2)" opacity="0.5"/>
+          <defs>
+            <linearGradient id="netFacet1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#2a7784"/>
+            </linearGradient>
+            <linearGradient id="netFacet2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#144d56"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
 
-    <section class="hotels" id="hoteis">
-      <div class="section-label">03 · Hospedagem</div>
-      <h2 class="section-title">Duas bases estratégicas.<br><span>Conforto em cada etapa.</span></h2>
-      <div class="hotel-grid">
-        <article class="hotel" role="button" tabindex="0" data-gallery="rio" style="--hotel-image:url('./hotels/rio/fachada.png')"><small>CIUDAD DEL ESTE</small><h3>Rio Hotel by Bourbon</h3><p>Ambientes modernos, restaurante, bar, academia e localização estratégica para a programação.</p><span class="view">VER ACOMODAÇÕES E ESTRUTURA ↗</span></article>
-        <article class="hotel" role="button" tabindex="0" data-gallery="dazzler" style="--hotel-image:url('./hotels/dazzler/piscina.png')"><small>ASSUNÇÃO</small><h3>Dazzler by Wyndham</h3><p>Estrutura contemporânea com piscina, academia e fácil acesso aos compromissos da imersão.</p><span class="view">VER ACOMODAÇÕES E ESTRUTURA ↗</span></article>
+      <div class="networking-head reveal">
+        <div class="section-index">03 · CONEXÕES À MESA</div>
+        <h2>Conexões à mesa: Gastronomia e Networking</h2>
+      </div>
+
+      <div class="food-quad-grid reveal">
+        <!-- Linha Superior 1: Sax Palace (pílula no topo) -->
+        <article class="food-quad-card top-capsule">
+          <header class="food-capsule-badge">
+            <h3>SAX PALACE</h3>
+          </header>
+          <div class="food-quad-image">
+            <img src="assets/sax-palace.jpg" alt="Sax Palace" loading="lazy">
+          </div>
+        </article>
+
+        <!-- Linha Superior 2: Churrascaria Gaúcho (pílula no topo) -->
+        <article class="food-quad-card top-capsule">
+          <header class="food-capsule-badge">
+            <h3>CHURRASCARIA<br>GAÚCHO</h3>
+          </header>
+          <div class="food-quad-image">
+            <img src="assets/rooftop.jpg" alt="Churrascaria Gaúcho" loading="lazy">
+          </div>
+        </article>
+
+        <!-- Linha Inferior 1: Rooftop Dazzler (pílula na base) -->
+        <article class="food-quad-card bottom-capsule">
+          <div class="food-quad-image">
+            <img src="assets/churrascaria.jpg" alt="Rooftop Dazzler" loading="lazy">
+          </div>
+          <footer class="food-capsule-badge">
+            <h3>ROOFTOP<br>DAZZLER</h3>
+          </footer>
+        </article>
+
+        <!-- Linha Inferior 2: Distrito Brewing Co. (pílula na base) -->
+        <article class="food-quad-card bottom-capsule">
+          <div class="food-quad-image">
+            <img src="assets/distrito.jpg" alt="Distrito Brewing Co." loading="lazy">
+          </div>
+          <footer class="food-capsule-badge">
+            <h3>DISTRITO<br>BREWING CO.</h3>
+          </footer>
+        </article>
       </div>
     </section>
 
-    <section class="visitas" id="visitas">
-      <div class="visitas-box">
-        <div class="visitas-copy">
-          <div class="section-label">04 · VISITAS TÉCNICAS</div>
-          <h2>Visitas<br><span>técnicas:</span></h2>
-          <p>Conhecimento que vai além da teoria. Uma imersão em empresas e instituições para entender o mercado, gerar conexões e enxergar novas oportunidades.</p>
-        </div>
-        <div class="visitas-list-wrap">
-          <div class="visita-item">
-            <div class="visita-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2l9 5H3l9-5z"/></svg>
-            </div>
-            <span class="visita-text">Embaixada do Brasil em Assunção.</span>
+    <section class="visits" id="visitas">
+      <div class="visits-split-container reveal">
+        <!-- Coluna Esquerda: Dark Teal com Texto e Arcos Prateados -->
+        <div class="visits-left-col">
+          <div class="visits-left-decor" aria-hidden="true">
+            <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M-40 280 A 240 240 0 0 1 200 40" stroke="url(#silverGradient1)" stroke-width="48" opacity="0.45"/>
+              <path d="M-40 280 A 180 180 0 0 1 140 100" stroke="url(#silverGradient2)" stroke-width="36" opacity="0.65"/>
+              <path d="M-40 280 A 120 120 0 0 1 80 160" stroke="url(#silverGradient3)" stroke-width="26" opacity="0.85"/>
+              <defs>
+                <linearGradient id="silverGradient1" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2d4a50"/>
+                  <stop offset="50%" stop-color="#b8cbcf"/>
+                  <stop offset="100%" stop-color="#eaf2f4"/>
+                </linearGradient>
+                <linearGradient id="silverGradient2" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#37555b"/>
+                  <stop offset="50%" stop-color="#ccd9dc"/>
+                  <stop offset="100%" stop-color="#ffffff"/>
+                </linearGradient>
+                <linearGradient id="silverGradient3" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#416168"/>
+                  <stop offset="50%" stop-color="#dce6e8"/>
+                  <stop offset="100%" stop-color="#ffffff"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-          <div class="visita-item">
-            <div class="visita-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-            </div>
-            <span class="visita-text">Unión Industrial del Paraguay</span>
-          </div>
-          <div class="visita-item">
-            <div class="visita-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
-            </div>
-            <span class="visita-text">Maspy S.A</span>
-          </div>
-          <div class="visita-item">
-            <div class="visita-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <span class="visita-text">Cellshop</span>
-          </div>
-          <div class="visita-item">
-            <div class="visita-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4H2v16z"/><path d="M18 16h.01M18 12h.01"/></svg>
-            </div>
-            <span class="visita-text">Mega Plásticos</span>
+
+          <div class="visits-copy">
+            <div class="section-index light">04 · VISITAS TÉCNICAS</div>
+            <h2>Visitas<br>técnicas:</h2>
+            <p>Conhecimento que vai além da teoria. Uma imersão em empresas e instituições para entender o mercado, gerar conexões e enxergar novas oportunidades.</p>
           </div>
         </div>
+
+        <!-- Coluna Direita: Fundo Branco com Ícones Circulares -->
+        <div class="visits-right-col">
+          <ul class="visits-icon-list">
+            <!-- 01: Embaixada do Brasil -->
+            <li>
+              <div class="visit-circle-badge" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 2 L21 3.5 L16 5 V12" />
+                  <path d="M5 12 L16 5 L27 12" />
+                  <line x1="8" y1="12" x2="8" y2="24" />
+                  <line x1="13" y1="12" x2="13" y2="24" />
+                  <line x1="19" y1="12" x2="19" y2="24" />
+                  <line x1="24" y1="12" x2="24" y2="24" />
+                  <line x1="4" y1="24" x2="28" y2="24" />
+                  <line x1="2" y1="27" x2="30" y2="27" />
+                </svg>
+              </div>
+              <span class="visit-item-text">Embaixada do Brasil em Assunção.</span>
+            </li>
+
+            <!-- 02: Unión Industrial del Paraguay -->
+            <li>
+              <div class="visit-circle-badge" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 6 A10 10 0 1 0 26 16" />
+                  <path d="M16 2 v4 M16 26 v4 M2 16 h4 M26 16 h4" />
+                  <path d="M6 6 l3 3 M23 23 l3 3 M6 26 l3 -3 M23 9 l3 -3" />
+                  <path d="M13 16 l2 2 4-4" />
+                </svg>
+              </div>
+              <span class="visit-item-text">Unión Industrial del Paraguay</span>
+            </li>
+
+            <!-- 03: Maspy S.A -->
+            <li>
+              <div class="visit-circle-badge" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 6 H24 V27 H14 Z" />
+                  <path d="M6 12 H14 V27 H6 Z" />
+                  <line x1="18" y1="10" x2="20" y2="10" />
+                  <line x1="18" y1="14" x2="20" y2="14" />
+                  <line x1="18" y1="18" x2="20" y2="18" />
+                  <line x1="18" y1="22" x2="20" y2="22" />
+                  <line x1="9" y1="16" x2="11" y2="16" />
+                  <line x1="9" y1="20" x2="11" y2="20" />
+                  <line x1="4" y1="27" x2="28" y2="27" />
+                </svg>
+              </div>
+              <span class="visit-item-text">Maspy S.A</span>
+            </li>
+
+            <!-- 03: Cellshop -->
+            <li>
+              <div class="visit-circle-badge" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="6" width="16" height="12" rx="2" />
+                  <path d="M12 18 V22 M8 22 H16" />
+                  <rect x="18" y="12" width="10" height="14" rx="2" />
+                  <line x1="23" y1="23" x2="23.01" y2="23" />
+                </svg>
+              </div>
+              <span class="visit-item-text">Cellshop</span>
+            </li>
+
+            <!-- 04: Mega Plásticos -->
+            <li>
+              <div class="visit-circle-badge" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 26 V16 L10 20 V16 L16 20 V10 H28 V26 H4 Z" />
+                  <line x1="20" y1="10" x2="20" y2="6" />
+                  <line x1="24" y1="10" x2="24" y2="6" />
+                  <line x1="9" y1="22" x2="11" y2="22" />
+                  <line x1="15" y1="22" x2="17" y2="22" />
+                  <line x1="21" y1="22" x2="23" y2="22" />
+                  <line x1="2" y1="26" x2="30" y2="26" />
+                </svg>
+              </div>
+              <span class="visit-item-text">Mega Plásticos</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Faixa Consultiva de Contato em Visitas -->
+      <div class="visitas-contact-strip reveal">
+        <div class="visitas-contact-copy">
+          <span class="visitas-contact-tag">ATENDIMENTO CONSULTIVO</span>
+          <h3>Deseja inscrever sócios ou customizar a participação da sua empresa?</h3>
+          <p>Converse diretamente com nossa equipe e tire todas as dúvidas sobre o roteiro técnico e conexões bilaterais.</p>
+        </div>
+        <a class="button-outline-wa" href="https://wa.me/5511911083333?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20participa%C3%A7%C3%A3o%20corporativa%20e%20visitas%20t%C3%A9cnicas%20da%20Fronteira%20de%20Neg%C3%B3cios" target="_blank" rel="noopener noreferrer" aria-label="Falar com consultor via WhatsApp sobre visitas técnicas">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>Falar com consultor via WhatsApp ↗</span>
+        </a>
       </div>
     </section>
 
     <section class="pricing" id="investimento">
-      <div class="section-label">05 · Investimento</div>
-      <h2 class="section-title">Escolha a experiência<br><span>ideal para você.</span></h2>
-      <div class="price-grid">
-        <article class="price-card">
-          <small>SEM AÉREO</small><h3>Experiência terrestre</h3><div class="price">R$ 7.400,00</div><div class="per">Valor por pessoa · à vista</div>
-          <ul><li>Hospedagem de alto padrão</li><li>Café da manhã diário</li><li>4 refeições de networking</li><li>Bagagem de despacho</li><li>Todos os translados</li></ul>
-          <a class="button track-contact" href="https://wa.me/5511911083333?text=Olá!%20Tenho%20interesse%20na%20opção%20sem%20aéreo%20de%20R$%207.400,00." target="_blank" rel="noopener">Quero esta opção ↗</a>
-        </article>
-        <article class="price-card featured">
-          <div class="badge">EXPERIÊNCIA COMPLETA</div><small>COM AÉREO · SAÍDA DE FLORIANÓPOLIS</small><h3>Experiência aérea</h3><div class="price">R$ 9.497,00</div><div class="per">Valor por pessoa · à vista</div>
-          <ul><li>Recepção e assistência no aeroporto</li><li>Passagens aéreas completas</li><li>Hospedagem de alto padrão</li><li>Café da manhã diário</li><li>4 refeições de networking</li><li>Bagagem de despacho</li><li>Todos os translados</li></ul>
-          <a class="button track-contact" href="https://wa.me/5511911083333?text=Olá!%20Tenho%20interesse%20na%20opção%20com%20aéreo%20de%20R$%209.497,00." target="_blank" rel="noopener">Quero a experiência completa ↗</a>
-        </article>
+      <div class="pricing-decor" aria-hidden="true">
+        <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M70 15 L240 185 L160 265" stroke="#c1f079" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M125 15 L265 155 L215 205" stroke="#c1f079" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+        </svg>
       </div>
 
-      <!-- Detalhamento de Incluso e Nao Incluso -->
-      <div class="inclusion-section" id="incluso-detalhes">
-        <div class="inclusion-header">
-          <div class="section-label">Transparência total</div>
-          <h3 class="section-title" style="margin: 14px 0 10px; font-size: clamp(2rem, 4vw, 3.2rem);">O que está e o que não está <span>incluso</span></h3>
-          <div class="inclusion-tabs" role="tablist" aria-label="Filtro de itens inclusos">
-            <button class="tab-btn active" data-tab="all" type="button">Visão completa</button>
-            <button class="tab-btn" data-tab="included" type="button">✓ O que está incluso</button>
-            <button class="tab-btn" data-tab="not-included" type="button">✕ Não incluso</button>
+      <div class="pricing-head reveal">
+        <div class="section-index">05 · INVESTIMENTO</div>
+        <h2>Escolha começar <span>essa travessia.</span></h2>
+      </div>
+
+      <div class="pricing-pill-grid reveal">
+        <!-- Opção Parcelado -->
+        <div class="pricing-pill-wrapper">
+          <span class="pricing-pill-label">PARCELADO</span>
+          <a class="pricing-pill-card" href="https://wa.me/5511911083333?text=Ol%C3%A1%2C%20gostaria%20de%20garantir%20minha%20participa%C3%A7%C3%A3o%20no%20Fronteira%20de%20Neg%C3%B3cios%20na%20op%C3%A7%C3%A3o%20Parcelado%20(3x%20no%20cart%C3%A3o)" target="_blank" rel="noopener noreferrer" aria-label="Opção Parcelado: R$ 7.850,00 em 3x no cartão de crédito">
+            <div class="pill-price">
+              <b>R$ 7.850,00</b>
+            </div>
+            <span class="pill-subtext">3X NO CARTÃO DE CRÉDITO</span>
+          </a>
+        </div>
+
+        <!-- Opção PIX -->
+        <div class="pricing-pill-wrapper">
+          <span class="pricing-pill-label highlight">DESCONTO ESPECIAL NO PIX</span>
+          <a class="pricing-pill-card featured" href="https://wa.me/5511911083333?text=Ol%C3%A1%2C%20gostaria%20de%20garantir%20minha%20participa%C3%A7%C3%A3o%20no%20Fronteira%20de%20Neg%C3%B3cios%20com%20desconto%20no%20PIX%20(R%24%207.400%2C00)" target="_blank" rel="noopener noreferrer" aria-label="Opção com Desconto no PIX: R$ 7.400,00 via PIX">
+            <div class="pill-price">
+              <b>R$ 7.400,00</b>
+            </div>
+            <span class="pill-subtext">VIA PIX</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Detalhamento de Itens Inclusos e Não Inclusos -->
+      <div class="pricing-details-grid reveal">
+        <!-- Card: O que está incluso -->
+        <div class="pricing-details-card included">
+          <div class="details-card-header">
+            <span class="details-icon-badge check">✓</span>
+            <h3>O que está incluso</h3>
           </div>
+          <ul class="details-list">
+            <li><span>✓</span> Seguro viagem</li>
+            <li><span>✓</span> Hospedagem com café da manhã</li>
+            <li><span>✓</span> Translados internos do roteiro</li>
+            <li><span>✓</span> 4 jantares de networking</li>
+            <li><span>✓</span> Apoio logístico</li>
+            <li><span>✓</span> Visitas técnicas</li>
+            <li><span>✓</span> Mentoria</li>
+          </ul>
         </div>
 
-        <div class="inclusion-grid" id="inclusionGrid">
-          <!-- Card: O que está incluso -->
-          <article class="inclusion-card included">
-            <div class="inc-card-head">
-              <span class="inc-badge check">✓</span>
-              <div class="inc-title">
-                <h4>Incluso</h4>
-                <small>Toda a infraestrutura e acompanhamento inclusos na jornada</small>
-              </div>
+                  <!-- Card: O que não está incluso -->
+          <div class="pricing-details-card not-included">
+            <div class="details-card-header">
+              <span class="details-icon-badge cross">✕</span>
+              <h3>Não incluso</h3>
             </div>
-            <ul class="inc-list check-list">
-              <li><span class="bullet">✓</span> <span><strong>Seguro viagem</strong> de cobertura internacional</span></li>
-              <li><span class="bullet">✓</span> <span><strong>Hospedagem</strong> de alto padrão com café da manhã</span></li>
-              <li><span class="bullet">✓</span> <span><strong>Translados internos do roteiro</strong> coordenados pela equipe</span></li>
-              <li><span class="bullet">✓</span> <span><strong>4 jantares de networking</strong> estratégicos</span></li>
-              <li><span class="bullet">✓</span> <span><strong>Apoio logístico</strong> integral da delegação</span></li>
-              <li><span class="bullet">✓</span> <span><strong>Visitas técnicas</strong> às empresas e instituições oficiais</span></li>
-              <li><span class="bullet">✓</span> <span><strong>Mentoria</strong> e direcionamento durante a imersão</span></li>
+            <ul class="details-list">
+              <li><span>✕</span> Despesas pessoais</li>
+              <li><span>✕</span> Documentação de fronteira</li>
+              <li><span>✕</span> Almoços e bebidas</li>
             </ul>
-          </article>
-
-          <!-- Card: O que não está incluso -->
-          <article class="inclusion-card not-included">
-            <div class="inc-card-head">
-              <span class="inc-badge cross">✕</span>
-              <div class="inc-title">
-                <h4>Não incluso</h4>
-                <small>Despesas extras de responsabilidade individual</small>
-              </div>
-            </div>
-            <ul class="inc-list cross-list">
-              <li><span class="bullet">✕</span> <span><strong>Despesas pessoais</strong> (frigobar, compras, telefonia e extras)</span></li>
-              <li><span class="bullet">✕</span> <span><strong>Documentação de fronteira</strong> (RG atualizado ou passaporte)</span></li>
-              <li><span class="bullet">✕</span> <span><strong>Almoços e bebidas</strong> não previstos na programação oficial</span></li>
-            </ul>
-          </article>
-        </div>
+          </div>
       </div>
+
+
     </section>
 
-    <section class="partners" id="parceria">
-      <div class="partner-box"><div class="section-label">Uma realização conjunta</div><div class="partner-names"><img src="./partners/ultravel.png" alt="Ultravel Viagens"><i>×</i><img src="./partners/mais-viagens.png" alt="Mais Viagens"></div><p>Duas marcas unidas para entregar estratégia, cuidado, logística e uma experiência empresarial memorável.</p></div>
-    </section>
-
-    <section class="closing">
-      <div class="section-label">Vagas limitadas</div><h2 class="section-title">Seu próximo movimento pode começar <span>do outro lado da fronteira.</span></h2><p>Fale com a equipe responsável e receba todos os detalhes.</p>
-      <a class="button track-contact" href="https://wa.me/5511911083333?text=Olá!%20Quero%20participar%20da%20Fronteira%20de%20Negócios." target="_blank" rel="noopener">Falar no WhatsApp ↗</a>
+    <section class="closing" id="contato">
+      <div class="closing-orbit"></div><div class="closing-content reveal"><span>16—21 OUTUBRO · PARAGUAI</span><h2>O próximo grande negócio pode estar do outro lado da fronteira.</h2><p>Fale com a equipe responsável e garanta sua participação na imersão.</p><a class="button light-button" href="https://wa.me/5511911083333?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Fronteira%20de%20Neg%C3%B3cios%20Edi%C3%A7%C3%A3o%20Paraguai" target="_blank" rel="noopener noreferrer">Quero participar agora <span>↗</span></a></div>
     </section>
   </main>
-  <footer><span>© 2026 Catalisa41</span><span>Ultravel × Mais Viagens</span></footer>
-  <div class="gallery" id="hotelGallery" aria-hidden="true"><div class="gallery-panel" role="dialog" aria-modal="true" aria-labelledby="galleryTitle"><div class="gallery-head"><h3 id="galleryTitle"></h3><button class="gallery-close" type="button" aria-label="Fechar">✕</button></div><img class="gallery-main" alt=""><div class="thumbs"></div></div></div>
-  <script>
-    function trackEvent(name, data) {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push(Object.assign({ event: name }, data));
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', name, data);
-      }
-      if (typeof window.fbq === 'function' && (name === 'contact_click' || name === 'generate_lead')) {
-        window.fbq('track', 'Lead');
-      }
-    }
 
-    document.querySelectorAll('.track-contact').forEach(function(link){
-      link.addEventListener('click', function(){
-        trackEvent('generate_lead', {
-          event_category: 'engagement',
-          channel: 'whatsapp',
-          page: 'catalisa41',
-          destination_url: link.href
-        });
-      });
-    });
+  <a class="mobile-cta" href="#investimento">Quero participar <span>↗</span></a>
 
-    const hotelData={
-      rio:{title:'Rio Hotel by Bourbon',images:['./hotels/rio/fachada.png','./hotels/rio/apartamento.png','./hotels/rio/restaurante.png','./hotels/rio/bar.png','./hotels/rio/academia.png']},
-      dazzler:{title:'Dazzler by Wyndham Asunción',images:['./hotels/dazzler/piscina.png','./hotels/dazzler/academia.png','./hotels/dazzler/eventos.png','./hotels/dazzler/buffet.png']}
-    };
-    const gallery=document.getElementById('hotelGallery'),main=gallery.querySelector('.gallery-main'),thumbs=gallery.querySelector('.thumbs'),galleryTitle=document.getElementById('galleryTitle');
-    function openGallery(key){
-      const data=hotelData[key];
-      galleryTitle.textContent=data.title;
-      thumbs.innerHTML='';
-      data.images.forEach(function(src,i){
-        const b=document.createElement('button'),im=document.createElement('img');
-        im.src=src;
-        im.alt=data.title+' — foto '+(i+1);
-        b.appendChild(im);
-        b.onclick=function(){
-          main.src=src;
-          main.alt=im.alt;
-          thumbs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
-          b.classList.add('active');
-        };
-        thumbs.appendChild(b);
-      });
-      thumbs.firstChild.click();
-      gallery.classList.add('open');
-      gallery.setAttribute('aria-hidden','false');
-      document.body.style.overflow='hidden';
-      trackEvent('view_item', {
-        event_category: 'gallery',
-        hotel: key,
-        hotel_name: data.title
-      });
-    }
-    function closeGallery(){
-      gallery.classList.remove('open');
-      gallery.setAttribute('aria-hidden','true');
-      document.body.style.overflow='';
-    }
-    document.querySelectorAll('[data-gallery]').forEach(function(card){
-      card.onclick=()=>openGallery(card.dataset.gallery);
-      card.onkeydown=function(e){
-        if(e.key==='Enter'||e.key===' '){
-          e.preventDefault();
-          openGallery(card.dataset.gallery);
-        }
-      };
-    });
-    gallery.querySelector('.gallery-close').onclick=closeGallery;
-    gallery.onclick=function(e){if(e.target===gallery)closeGallery()};
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeGallery()});
+  <footer>
+    <div class="footer-brand"><b>FRONTEIRA</b><span>DE NEGÓCIOS</span></div>
+    <div class="footer-contact">
+      <span class="footer-contact-label">CANAL EXCLUSIVO</span>
+      <a class="footer-wa-link" href="https://wa.me/5511911083333?text=Ol%C3%A1%2C%20gostaria%20de%20atendimento%20sobre%20a%20imers%C3%A3o%20Fronteira%20de%20Neg%C3%B3cios" target="_blank" rel="noopener noreferrer" aria-label="Atendimento via WhatsApp (11) 91108-3333">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        WhatsApp: (11) 91108-3333
+      </a>
+    </div>
+    <p>Uma realização</p>
+    <div class="partners"><strong>ultravel <small>VIAGENS</small></strong><i>×</i><strong>mais viagens</strong></div>
+    <a href="#top">VOLTAR AO TOPO ↑</a>
+  </footer>
 
-    // Abas de Incluso e Nao Incluso
-    document.querySelectorAll('.tab-btn').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
-        btn.classList.add('active');
-        var target = btn.dataset.tab;
-        var grid = document.getElementById('inclusionGrid');
-        if(!grid) return;
-        var incCard = grid.querySelector('.inclusion-card.included');
-        var notIncCard = grid.querySelector('.inclusion-card.not-included');
-        if(target === 'all'){
-          if(incCard) incCard.style.display = '';
-          if(notIncCard) notIncCard.style.display = '';
-        } else if(target === 'included'){
-          if(incCard) incCard.style.display = '';
-          if(notIncCard) notIncCard.style.display = 'none';
-        } else if(target === 'not-included'){
-          if(incCard) incCard.style.display = 'none';
-          if(notIncCard) notIncCard.style.display = '';
-        }
-        trackEvent('view_inclusion_tab', {
-          event_category: 'engagement',
-          tab_name: target
-        });
-      });
-    });
-  </script>
+  <!-- Widget Flutuante de WhatsApp -->
+  <aside class="floating-whatsapp" aria-label="Atendimento rápido no WhatsApp">
+    <a href="https://wa.me/5511911083333?text=Ol%C3%A1!%20Estou%20navegando%20pelo%20site%20da%20imers%C3%A3o%20Fronteira%20de%20Neg%C3%B3cios%20e%20gostaria%20de%20um%20atendimento%20r%C3%A1pido" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" id="floatingWhatsappBtn" aria-label="Falar com a equipe no WhatsApp">
+      <span class="floating-whatsapp-pulse" aria-hidden="true"></span>
+      <span class="floating-whatsapp-status" aria-hidden="true" title="Equipe Online"></span>
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      <span class="floating-whatsapp-tooltip">Falar com a agência</span>
+    </a>
+  </aside>
+  <!-- Modal de Captura de Lead (Gatekeeper) -->
+  <div id="gatekeeperOverlay" class="gatekeeper-overlay" role="dialog" aria-modal="true" aria-labelledby="gatekeeperTitle">
+    <div class="gatekeeper-modal">
+      <div class="gatekeeper-badge">Acesso Exclusivo</div>
+      <h2 id="gatekeeperTitle" class="gatekeeper-title">Libere o acesso à <em>imersão.</em></h2>
+      <p class="gatekeeper-desc">Informe seu nome e WhatsApp para visualizar a programação completa, visitas técnicas e investimento da edição Paraguai 2026.</p>
+
+      <form id="gatekeeperForm" class="gatekeeper-form" novalidate>
+        <div class="gatekeeper-field">
+          <label for="gatekeeperName">Seu Nome Completo</label>
+          <div class="gatekeeper-input-wrapper">
+            <span class="gatekeeper-icon" aria-hidden="true">👤</span>
+            <input type="text" id="gatekeeperName" class="gatekeeper-input" placeholder="Ex: Roberto Silva" autocomplete="name" required>
+          </div>
+          <span id="gatekeeperNameError" class="gatekeeper-error-msg"></span>
+        </div>
+
+        <div class="gatekeeper-field">
+          <label for="gatekeeperPhone">Seu WhatsApp</label>
+          <div class="gatekeeper-input-wrapper">
+            <span class="gatekeeper-icon" aria-hidden="true">📱</span>
+            <input type="tel" id="gatekeeperPhone" class="gatekeeper-input" placeholder="(11) 99999-9999" autocomplete="tel" required maxlength="15">
+          </div>
+          <span id="gatekeeperPhoneError" class="gatekeeper-error-msg"></span>
+        </div>
+
+        <button type="submit" id="gatekeeperSubmitBtn" class="gatekeeper-btn">
+          <span class="gatekeeper-btn-text">Liberar Acesso Agora ↗</span>
+          <span class="gatekeeper-spinner" aria-hidden="true"></span>
+        </button>
+
+        <div class="gatekeeper-footer">
+          <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span>Seus dados estão protegidos. Não enviamos spam.</span>
+        </div>
+
+        <div class="gatekeeper-wa-direct">
+          <span>Prefere falar direto com um consultor?</span>
+          <a href="https://wa.me/5511911083333?text=Ol%C3%A1%2C%20estou%20na%20p%C3%A1gina%20de%20inscri%C3%A7%C3%A3o%20da%20Fronteira%20de%20Neg%C3%B3cios%20e%20gostaria%20de%20atendimento%20direto" target="_blank" rel="noopener noreferrer">Falar no WhatsApp <span>↗</span></a>
+        </div>
+      </form>
+
+      <div id="gatekeeperSuccessBox" class="gatekeeper-success-box">
+        <div class="gatekeeper-success-icon">✓</div>
+        <h3 class="gatekeeper-success-title">Acesso Liberado!</h3>
+        <p class="gatekeeper-success-desc">Bem-vindo(a) à imersão Fronteira de Negócios. Aproveite a apresentação.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="experience.js"></script>
+  <script src="gatekeeper.js"></script>
 </body>
 </html>
