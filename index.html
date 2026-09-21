@@ -309,6 +309,33 @@
     gallery.querySelector('.gallery-close').onclick=closeGallery;
     gallery.onclick=function(e){if(e.target===gallery)closeGallery()};
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeGallery()});
+
+    // Abas de Incluso e Nao Incluso
+    document.querySelectorAll('.tab-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+        btn.classList.add('active');
+        var target = btn.dataset.tab;
+        var grid = document.getElementById('inclusionGrid');
+        if(!grid) return;
+        var incCard = grid.querySelector('.inclusion-card.included');
+        var notIncCard = grid.querySelector('.inclusion-card.not-included');
+        if(target === 'all'){
+          if(incCard) incCard.style.display = '';
+          if(notIncCard) notIncCard.style.display = '';
+        } else if(target === 'included'){
+          if(incCard) incCard.style.display = '';
+          if(notIncCard) notIncCard.style.display = 'none';
+        } else if(target === 'not-included'){
+          if(incCard) incCard.style.display = 'none';
+          if(notIncCard) notIncCard.style.display = '';
+        }
+        trackEvent('view_inclusion_tab', {
+          event_category: 'engagement',
+          tab_name: target
+        });
+      });
+    });
   </script>
 </body>
 </html>
