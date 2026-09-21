@@ -4,7 +4,7 @@
  */
 window.CATALISA_TRACKING = {
   googleTagManagerId: "", // Ex.: GTM-XXXXXXX
-  googleAnalyticsId: "",  // Ex.: G-XXXXXXXXXX (Cole seu ID do Google Analytics 4 aqui)
+  googleAnalyticsId: "G-QS3EM6B9H9",
   metaPixelId: "",        // Ex.: 123456789012345
 };
 
