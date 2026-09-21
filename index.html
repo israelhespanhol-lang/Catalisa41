@@ -109,17 +109,77 @@
   <footer><span>© 2026 Catalisa41</span><span>Ultravel × Mais Viagens</span></footer>
   <div class="gallery" id="hotelGallery" aria-hidden="true"><div class="gallery-panel" role="dialog" aria-modal="true" aria-labelledby="galleryTitle"><div class="gallery-head"><h3 id="galleryTitle"></h3><button class="gallery-close" type="button" aria-label="Fechar">✕</button></div><img class="gallery-main" alt=""><div class="thumbs"></div></div></div>
   <script>
-    window.dataLayer=window.dataLayer||[];
-    document.querySelectorAll('.track-contact').forEach(function(link){link.addEventListener('click',function(){window.dataLayer.push({event:'contact_click',channel:'whatsapp',page:'catalisa41'});});});
+    function trackEvent(name, data) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: name }, data));
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', name, data);
+      }
+      if (typeof window.fbq === 'function' && (name === 'contact_click' || name === 'generate_lead')) {
+        window.fbq('track', 'Lead');
+      }
+    }
+
+    document.querySelectorAll('.track-contact').forEach(function(link){
+      link.addEventListener('click', function(){
+        trackEvent('generate_lead', {
+          event_category: 'engagement',
+          channel: 'whatsapp',
+          page: 'catalisa41',
+          destination_url: link.href
+        });
+      });
+    });
+
     const hotelData={
       rio:{title:'Rio Hotel by Bourbon',images:['./hotels/rio/fachada.png','./hotels/rio/apartamento.png','./hotels/rio/restaurante.png','./hotels/rio/bar.png','./hotels/rio/academia.png']},
       dazzler:{title:'Dazzler by Wyndham Asunción',images:['./hotels/dazzler/piscina.png','./hotels/dazzler/academia.png','./hotels/dazzler/eventos.png','./hotels/dazzler/buffet.png']}
     };
     const gallery=document.getElementById('hotelGallery'),main=gallery.querySelector('.gallery-main'),thumbs=gallery.querySelector('.thumbs'),galleryTitle=document.getElementById('galleryTitle');
-    function openGallery(key){const data=hotelData[key];galleryTitle.textContent=data.title;thumbs.innerHTML='';data.images.forEach(function(src,i){const b=document.createElement('button'),im=document.createElement('img');im.src=src;im.alt=data.title+' — foto '+(i+1);b.appendChild(im);b.onclick=function(){main.src=src;main.alt=im.alt;thumbs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active')};thumbs.appendChild(b)});thumbs.firstChild.click();gallery.classList.add('open');gallery.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';window.dataLayer.push({event:'hotel_gallery_open',hotel:key})}
-    function closeGallery(){gallery.classList.remove('open');gallery.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-    document.querySelectorAll('[data-gallery]').forEach(function(card){card.onclick=()=>openGallery(card.dataset.gallery);card.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openGallery(card.dataset.gallery)}}});
-    gallery.querySelector('.gallery-close').onclick=closeGallery;gallery.onclick=function(e){if(e.target===gallery)closeGallery()};document.addEventListener('keydown',function(e){if(e.key==='Escape')closeGallery()});
+    function openGallery(key){
+      const data=hotelData[key];
+      galleryTitle.textContent=data.title;
+      thumbs.innerHTML='';
+      data.images.forEach(function(src,i){
+        const b=document.createElement('button'),im=document.createElement('img');
+        im.src=src;
+        im.alt=data.title+' — foto '+(i+1);
+        b.appendChild(im);
+        b.onclick=function(){
+          main.src=src;
+          main.alt=im.alt;
+          thumbs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+          b.classList.add('active');
+        };
+        thumbs.appendChild(b);
+      });
+      thumbs.firstChild.click();
+      gallery.classList.add('open');
+      gallery.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+      trackEvent('view_item', {
+        event_category: 'gallery',
+        hotel: key,
+        hotel_name: data.title
+      });
+    }
+    function closeGallery(){
+      gallery.classList.remove('open');
+      gallery.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+    }
+    document.querySelectorAll('[data-gallery]').forEach(function(card){
+      card.onclick=()=>openGallery(card.dataset.gallery);
+      card.onkeydown=function(e){
+        if(e.key==='Enter'||e.key===' '){
+          e.preventDefault();
+          openGallery(card.dataset.gallery);
+        }
+      };
+    });
+    gallery.querySelector('.gallery-close').onclick=closeGallery;
+    gallery.onclick=function(e){if(e.target===gallery)closeGallery()};
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeGallery()});
   </script>
 </body>
 </html>
