@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +11,9 @@
   <title>Catalisa41 | Fronteira de Negócios — Paraguai 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <script src="./tracking-config.js"></script>
   <style>
     :root {
@@ -24,21 +27,36 @@
       --muted: #bbb2ca;
       --line: rgba(190, 135, 255, 0.2);
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: radial-gradient(circle at 80% 15%, rgba(155, 69, 255, 0.12), transparent 45%),
-                  radial-gradient(circle at 15% 55%, rgba(110, 44, 231, 0.1), transparent 50%),
-                  var(--bg);
+        radial-gradient(circle at 15% 55%, rgba(110, 44, 231, 0.1), transparent 50%),
+        var(--bg);
       background-attachment: fixed;
       color: var(--text);
       font-family: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
     /* Header Nav */
     .nav {
@@ -55,13 +73,18 @@
       backdrop-filter: blur(15px);
       -webkit-backdrop-filter: blur(15px);
     }
+
     .brand {
       font-family: 'Outfit', sans-serif;
       font-weight: 900;
       letter-spacing: -0.04em;
       font-size: 21px;
     }
-    .brand span { color: var(--violet); }
+
+    .brand span {
+      color: var(--violet);
+    }
+
     .nav-links {
       display: flex;
       gap: 26px;
@@ -69,13 +92,17 @@
       font-size: 13px;
       font-weight: 600;
     }
+
     .nav-links a {
       transition: color 0.2s;
     }
+
     .nav-links a:hover {
       color: #ffffff;
     }
-    .nav-cta, .button {
+
+    .nav-cta,
+    .button {
       background: linear-gradient(135deg, var(--violet), var(--violet2));
       padding: 13px 22px;
       border-radius: 8px;
@@ -92,108 +119,359 @@
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .nav-cta:hover, .button:hover {
+
+    .nav-cta:hover,
+    .button:hover {
       transform: translateY(-2px);
       box-shadow: 0 16px 42px rgba(130, 52, 235, 0.4);
     }
 
-    /* Hero Section */
+    /* Hero Section - Redesenhado Premium */
+    #inicio {
+      position: relative;
+    }
+
+    #inicio::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(190, 135, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(190, 135, 255, 0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 75%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #inicio::after {
+      content: "";
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 960px;
+      height: 480px;
+      background: radial-gradient(ellipse, rgba(155, 69, 255, 0.16) 0%, rgba(99, 102, 241, 0.08) 45%, transparent 75%);
+      filter: blur(70px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
     .hero-section {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.88fr 1.12fr;
       align-items: center;
-      gap: 48px;
-      max-width: 1300px;
+      gap: 50px;
+      max-width: 1440px;
       margin: 0 auto;
-      padding: 60px max(22px, 5vw) 90px;
-      min-height: 85vh;
+      padding: 50px max(24px, 4vw) 70px;
+      min-height: calc(100vh - 76px);
+      position: relative;
+      z-index: 2;
     }
+
     .hero-copy {
       position: relative;
       padding: 0;
       order: 1;
-      max-width: 600px;
+      max-width: 620px;
     }
-    .hero-image {
-      position: relative;
-      width: 100%;
-      order: 2;
-    }
-    .hero-image-frame {
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 50px rgba(155, 69, 255, 0.16);
-      background: #0d0818;
-      position: relative;
-    }
-    .hero-image-frame img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    .hero-image-frame:hover img {
-      transform: scale(1.02);
-    }
-    .eyebrow {
-      font-size: 11px;
-      color: var(--pink);
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      font-weight: 800;
-      display: flex;
+
+    /* Eyebrow Badge */
+    .hero-badge {
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      padding: 7px 16px;
+      border-radius: 99px;
+      background: rgba(155, 69, 255, 0.08);
+      border: 1px solid rgba(190, 135, 255, 0.32);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(155, 69, 255, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      margin-bottom: 24px;
     }
-    .eyebrow::before {
-      content: "";
-      display: inline-block;
+
+    .badge-pulse {
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: #10b981;
       box-shadow: 0 0 10px #10b981;
+      position: relative;
+      flex-shrink: 0;
     }
-    h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(3rem, 5.8vw, 5.4rem);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
-      margin: 22px 0 26px;
-      font-weight: 900;
+
+    .badge-pulse::after {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      border: 1.5px solid #10b981;
+      opacity: 0.6;
+      animation: beaconPulse 2.2s ease-out infinite;
     }
-    h1 span {
+
+    @keyframes beaconPulse {
+      0% {
+        transform: scale(0.9);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(2.3);
+        opacity: 0;
+      }
+    }
+
+    .badge-edition {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .badge-sep {
+      color: rgba(214, 154, 255, 0.45);
+      font-size: 10px;
+    }
+
+    .badge-highlight {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       color: var(--pink);
-      text-shadow: 0 4px 24px rgba(214, 154, 255, 0.4);
     }
-    .lead {
-      font-size: clamp(16px, 1.7vw, 19px);
+
+    /* Headline */
+    .hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(3.2rem, 5.2vw, 5.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      margin: 0 0 22px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .hero-title-highlight {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffffff 0%, #f5d0fe 25%, #d946ef 55%, #c084fc 80%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 4px 28px rgba(217, 70, 239, 0.45));
+    }
+
+    /* Lead */
+    .hero-lead {
+      font-size: clamp(16px, 1.3vw, 18.5px);
       line-height: 1.7;
-      color: var(--muted);
-      margin: 0;
+      color: #c7bdd8;
+      margin: 0 0 34px;
+      max-width: 540px;
+      font-weight: 400;
     }
+
+    /* Actions */
     .hero-actions {
       display: flex;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
-      margin-top: 34px;
+      align-items: center;
+      margin-bottom: 38px;
     }
-    .button.secondary {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--line);
-      box-shadow: none;
-      color: var(--text);
+
+    .hero-btn-primary {
+      background: linear-gradient(135deg, #9b45ff 0%, #7928ca 50%, #6320ee 100%);
+      color: #ffffff;
+      padding: 16px 28px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 14px 34px rgba(121, 40, 202, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
     }
-    .button.secondary:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(190, 135, 255, 0.4);
+
+    .hero-btn-primary::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+      transition: 0.6s;
+    }
+
+    .hero-btn-primary:hover::after {
+      left: 100%;
+    }
+
+    .hero-btn-primary:hover {
+      transform: translateY(-2.5px);
+      box-shadow: 0 20px 45px rgba(121, 40, 202, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-btn-primary svg {
+      transition: transform 0.25s ease;
+    }
+
+    .hero-btn-primary:hover svg {
+      transform: translate(2px, -2px);
+    }
+
+    .hero-btn-secondary {
+      background: rgba(255, 255, 255, 0.035);
+      color: #f1edfa;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(190, 135, 255, 0.25);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .hero-btn-secondary:hover {
+      background: rgba(155, 69, 255, 0.12);
+      border-color: rgba(214, 154, 255, 0.55);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Executive Highlights Bar */
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      align-items: center;
+      gap: 18px;
+      padding: 16px 22px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(190, 135, 255, 0.18);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      max-width: 580px;
+    }
+
+    .highlight-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .highlight-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0;
+      word-spacing: 0.1em;
+    }
+
+    .highlight-lbl {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .highlight-sep {
+      width: 1px;
+      height: 28px;
+      background: rgba(190, 135, 255, 0.2);
+    }
+
+    /* Right Column: Hero Visual Stage (LARGE HIGH-RES PHOTO) */
+    .hero-visual {
+      position: relative;
+      width: 100%;
+      order: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-glow-aura {
+      position: absolute;
+      inset: -8%;
+      background: radial-gradient(circle at 60% 45%, rgba(155, 69, 255, 0.35) 0%, rgba(59, 130, 246, 0.18) 50%, transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-card-stage {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      border-radius: 24px;
+      padding: 6px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(155, 69, 255, 0.08) 50%, rgba(16, 10, 27, 0.9) 100%);
+      border: 1px solid rgba(190, 135, 255, 0.35);
+      box-shadow:
+        0 30px 85px rgba(0, 0, 0, 0.75),
+        0 0 65px rgba(155, 69, 255, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .hero-card-stage:hover {
+      transform: translateY(-4px);
+      border-color: rgba(214, 154, 255, 0.6);
+      box-shadow:
+        0 40px 95px rgba(0, 0, 0, 0.85),
+        0 0 85px rgba(155, 69, 255, 0.35);
+    }
+
+    .hero-image-canvas {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #0d0818;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: flex;
+    }
+
+    .hero-main-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-card-stage:hover .hero-main-img {
+      transform: scale(1.025);
     }
 
     /* Common Sections */
     section {
       padding: 95px max(22px, 7vw);
     }
+
     .section-label {
       color: var(--pink);
       font-size: 11px;
@@ -201,6 +479,7 @@
       font-weight: 800;
       text-transform: uppercase;
     }
+
     .section-title {
       font-family: 'Outfit', sans-serif;
       font-size: clamp(2.3rem, 5vw, 4.6rem);
@@ -209,6 +488,7 @@
       margin: 18px 0 50px;
       font-weight: 800;
     }
+
     .section-title span {
       color: var(--pink);
     }
@@ -219,11 +499,13 @@
       border-top: 1px solid rgba(255, 255, 255, 0.04);
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
+
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
     .feature {
       padding: 34px;
       border: 1px solid var(--line);
@@ -231,10 +513,12 @@
       border-radius: 18px;
       transition: transform 0.25s, border-color 0.25s;
     }
+
     .feature:hover {
       transform: translateY(-4px);
       border-color: rgba(190, 135, 255, 0.45);
     }
+
     .feature b {
       display: block;
       color: var(--pink);
@@ -243,12 +527,14 @@
       font-weight: 800;
       letter-spacing: 0.1em;
     }
+
     .feature h3 {
       font-family: 'Outfit', sans-serif;
       font-size: 24px;
       margin: 0 0 12px;
       font-weight: 700;
     }
+
     .feature p {
       color: var(--muted);
       line-height: 1.65;
@@ -260,6 +546,7 @@
     .route {
       background: linear-gradient(180deg, #08050f, #10091a);
     }
+
     .route-card {
       max-width: 1000px;
       border: 1px solid var(--line);
@@ -272,6 +559,7 @@
       gap: 28px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     }
+
     .city small {
       display: block;
       color: var(--pink);
@@ -279,14 +567,17 @@
       font-weight: 700;
       font-size: 11px;
     }
+
     .city strong {
       font-family: 'Outfit', sans-serif;
       font-size: clamp(2rem, 5vw, 4.2rem);
       font-weight: 800;
     }
+
     .city:last-child {
       text-align: right;
     }
+
     .flight {
       color: var(--pink);
       font-size: 32px;
@@ -298,11 +589,13 @@
     .hotels {
       background: var(--panel);
     }
+
     .hotel-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
+
     .hotel {
       min-height: 440px;
       padding: 40px;
@@ -319,23 +612,27 @@
       position: relative;
       overflow: hidden;
     }
+
     .hotel:hover {
       transform: translateY(-5px);
       border-color: rgba(190, 123, 255, 0.65);
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
     }
+
     .hotel small {
       color: var(--pink);
       letter-spacing: 0.16em;
       font-weight: 800;
       font-size: 11px;
     }
+
     .hotel h3 {
       font-family: 'Outfit', sans-serif;
       font-size: clamp(1.8rem, 3vw, 3rem);
       margin: 12px 0;
       font-weight: 800;
     }
+
     .hotel p {
       color: var(--muted);
       line-height: 1.6;
@@ -343,6 +640,7 @@
       margin: 0;
       font-size: 15px;
     }
+
     .hotel .view {
       margin-top: 14px;
       color: #ffffff;
@@ -358,6 +656,7 @@
     .visits {
       background: radial-gradient(circle at 50% 50%, rgba(155, 69, 255, 0.08), transparent 60%), #08050f;
     }
+
     .visits-card {
       max-width: 1100px;
       margin: 0 auto;
@@ -369,6 +668,7 @@
       overflow: hidden;
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
     }
+
     .visits-info {
       padding: 56px 48px;
       display: flex;
@@ -377,6 +677,7 @@
       border-right: 1px solid rgba(190, 135, 255, 0.15);
       background: radial-gradient(circle at 10% 20%, rgba(155, 69, 255, 0.12), transparent 75%);
     }
+
     .visits-title {
       font-family: 'Outfit', sans-serif;
       font-size: clamp(2.4rem, 4.5vw, 4.2rem);
@@ -385,10 +686,12 @@
       margin: 16px 0 22px;
       font-weight: 900;
     }
+
     .visits-title span {
       color: var(--pink);
       text-shadow: 0 4px 20px rgba(214, 154, 255, 0.35);
     }
+
     .visits-desc {
       color: var(--muted);
       line-height: 1.7;
@@ -396,6 +699,7 @@
       margin: 0;
       max-width: 440px;
     }
+
     .visits-list {
       padding: 44px 40px;
       display: flex;
@@ -404,6 +708,7 @@
       gap: 15px;
       background: rgba(255, 255, 255, 0.015);
     }
+
     .visit-item {
       display: flex;
       align-items: center;
@@ -414,11 +719,13 @@
       border: 1px solid rgba(190, 135, 255, 0.12);
       transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
+
     .visit-item:hover {
       transform: translateX(6px);
       border-color: rgba(190, 135, 255, 0.45);
       background: rgba(155, 69, 255, 0.08);
     }
+
     .visit-icon {
       width: 46px;
       height: 46px;
@@ -432,6 +739,7 @@
       flex-shrink: 0;
       box-shadow: 0 6px 16px rgba(130, 52, 235, 0.2);
     }
+
     .visit-name {
       font-weight: 700;
       font-size: 15.5px;
@@ -443,6 +751,7 @@
     .pricing {
       background: radial-gradient(circle at 50% 0, rgba(142, 53, 245, 0.17), transparent 35%), #08050f;
     }
+
     .price-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -450,6 +759,7 @@
       max-width: 1100px;
       margin: 0 auto 50px;
     }
+
     .price-card {
       border: 1px solid var(--line);
       background: linear-gradient(145deg, #130b20, #0d0815);
@@ -460,10 +770,12 @@
       display: flex;
       flex-direction: column;
     }
+
     .price-card.featured {
       border-color: rgba(190, 123, 255, 0.65);
       box-shadow: 0 25px 80px rgba(118, 37, 220, 0.22);
     }
+
     .badge {
       position: absolute;
       right: 0;
@@ -474,18 +786,21 @@
       padding: 10px 16px;
       letter-spacing: 0.12em;
     }
-    .price-card > small {
+
+    .price-card>small {
       color: var(--pink);
       font-weight: 800;
       letter-spacing: 0.15em;
       font-size: 11px;
     }
+
     .price-card h3 {
       font-family: 'Outfit', sans-serif;
       font-size: 26px;
       margin: 12px 0;
       font-weight: 800;
     }
+
     .price {
       font-family: 'Outfit', sans-serif;
       font-size: clamp(3rem, 6vw, 4.8rem);
@@ -493,30 +808,35 @@
       letter-spacing: -0.06em;
       margin: 24px 0 6px;
     }
+
     .per {
       color: var(--muted);
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
+
     .price-card ul {
       padding: 0;
       list-style: none;
       margin: 28px 0 32px;
       flex-grow: 1;
     }
+
     .price-card li {
       padding: 10px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.07);
       color: #ddd5ea;
       font-size: 14.5px;
     }
+
     .price-card li:before {
       content: "✓";
       color: var(--pink);
       font-weight: 900;
       margin-right: 10px;
     }
+
     .price-card .button {
       width: 100%;
       text-align: center;
@@ -532,6 +852,7 @@
       padding: 38px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     }
+
     .inclusion-header {
       display: flex;
       justify-content: space-between;
@@ -542,17 +863,20 @@
       padding-bottom: 22px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
+
     .inclusion-title h4 {
       font-family: 'Outfit', sans-serif;
       font-size: 24px;
       margin: 0 0 6px;
       font-weight: 800;
     }
+
     .inclusion-title p {
       color: var(--muted);
       margin: 0;
       font-size: 14px;
     }
+
     .inclusion-tabs {
       display: flex;
       background: rgba(255, 255, 255, 0.04);
@@ -561,6 +885,7 @@
       border: 1px solid rgba(190, 135, 255, 0.15);
       gap: 6px;
     }
+
     .inc-tab-btn {
       background: transparent;
       border: none;
@@ -572,27 +897,40 @@
       cursor: pointer;
       transition: all 0.2s;
     }
+
     .inc-tab-btn.active {
       background: linear-gradient(135deg, var(--violet), var(--violet2));
       color: #ffffff;
       box-shadow: 0 4px 15px rgba(155, 69, 255, 0.4);
     }
+
     .inc-tab-content {
       display: none;
     }
+
     .inc-tab-content.active {
       display: block;
       animation: fadeIn 0.3s ease;
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     .inc-items-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 14px;
     }
+
     .inc-item {
       padding: 15px 20px;
       border-radius: 12px;
@@ -602,11 +940,13 @@
       font-size: 15px;
       font-weight: 600;
     }
+
     .inc-item.yes {
       background: rgba(16, 185, 129, 0.06);
       border: 1px solid rgba(16, 185, 129, 0.2);
       color: #ffffff;
     }
+
     .inc-item.yes .icon-badge {
       width: 30px;
       height: 30px;
@@ -620,11 +960,13 @@
       font-size: 14px;
       flex-shrink: 0;
     }
+
     .inc-item.no {
       background: rgba(244, 63, 94, 0.06);
       border: 1px solid rgba(244, 63, 94, 0.2);
       color: #e2d9eb;
     }
+
     .inc-item.no .icon-badge {
       width: 30px;
       height: 30px;
@@ -638,11 +980,13 @@
       font-size: 14px;
       flex-shrink: 0;
     }
+
     .inc-dual-view {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 28px;
     }
+
     .inc-col-title {
       font-family: 'Outfit', sans-serif;
       font-size: 18px;
@@ -652,14 +996,21 @@
       align-items: center;
       gap: 10px;
     }
-    .inc-col-title.yes { color: #10b981; }
-    .inc-col-title.no { color: #f43f5e; }
+
+    .inc-col-title.yes {
+      color: #10b981;
+    }
+
+    .inc-col-title.no {
+      color: #f43f5e;
+    }
 
     /* Parceria */
     .partners {
       background: var(--panel);
       text-align: center;
     }
+
     .partner-box {
       border: 1px solid var(--line);
       border-radius: 22px;
@@ -668,6 +1019,7 @@
       max-width: 1000px;
       margin: auto;
     }
+
     .partner-names {
       display: flex;
       justify-content: center;
@@ -675,17 +1027,20 @@
       gap: 32px;
       margin-top: 15px;
     }
+
     .partner-names img {
       width: min(260px, 34vw);
       height: 105px;
       object-fit: contain;
       filter: drop-shadow(0 15px 28px rgba(0, 0, 0, 0.3));
     }
+
     .partner-names i {
       color: var(--violet);
       font-style: normal;
       font-size: 30px;
     }
+
     .partner-box p {
       color: var(--muted);
       line-height: 1.7;
@@ -700,10 +1055,12 @@
       padding-top: 120px;
       padding-bottom: 120px;
     }
+
     .closing .section-title {
       max-width: 900px;
       margin: 18px auto 28px;
     }
+
     .closing p {
       color: var(--muted);
       margin-bottom: 35px;
@@ -734,9 +1091,11 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
+
     .gallery.open {
       display: flex;
     }
+
     .gallery-panel {
       width: min(1000px, 96vw);
       max-height: 92vh;
@@ -747,17 +1106,20 @@
       padding: 24px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
     }
+
     .gallery-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 18px;
     }
+
     .gallery-head h3 {
       margin: 0;
       font-family: 'Outfit', sans-serif;
       font-size: 24px;
     }
+
     .gallery-close {
       border: 1px solid var(--line);
       background: transparent;
@@ -769,9 +1131,11 @@
       font-size: 16px;
       transition: background 0.2s;
     }
+
     .gallery-close:hover {
       background: rgba(255, 255, 255, 0.1);
     }
+
     .gallery-main {
       width: 100%;
       height: min(62vh, 600px);
@@ -779,12 +1143,14 @@
       background: #05030b;
       border-radius: 14px;
     }
+
     .thumbs {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 12px;
       margin-top: 14px;
     }
+
     .thumbs button {
       padding: 0;
       border: 2px solid transparent;
@@ -794,55 +1160,353 @@
       cursor: pointer;
       transition: border-color 0.2s;
     }
+
     .thumbs button.active {
       border-color: var(--violet);
     }
+
     .thumbs img {
       width: 100%;
       height: 80px;
       object-fit: cover;
     }
 
+    /* Modal Captura de Leads - Primeira Visita */
+    .lead-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(5, 3, 10, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .lead-popup.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lead-popup-box {
+      width: 100%;
+      max-width: 480px;
+      background: linear-gradient(145deg, rgba(25, 14, 42, 0.96) 0%, rgba(12, 7, 22, 0.98) 100%);
+      border: 1px solid rgba(190, 135, 255, 0.35);
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 60px rgba(155, 69, 255, 0.25);
+      position: relative;
+      transform: scale(0.92);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lead-popup.active .lead-popup-box {
+      transform: scale(1);
+    }
+
+    .lead-popup-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .lead-popup-close:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: scale(1.05);
+    }
+
+    .lead-popup-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 99px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #10b981;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .lead-popup-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 10px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .lead-popup-title span {
+      background: linear-gradient(135deg, #f5d0fe 0%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .lead-popup-desc {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 24px;
+    }
+
+    .lead-popup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .lead-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: left;
+    }
+
+    .lead-field label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e2daf0;
+    }
+
+    .lead-field input {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(190, 135, 255, 0.25);
+      color: #ffffff;
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .lead-field input:focus {
+      border-color: rgba(214, 154, 255, 0.7);
+      background: rgba(155, 69, 255, 0.08);
+    }
+
+    .lead-submit-btn {
+      margin-top: 6px;
+      width: 100%;
+      height: 50px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #9b45ff 0%, #7928ca 100%);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 10px 25px rgba(121, 40, 202, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .lead-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(121, 40, 202, 0.6);
+    }
+
+    .lead-popup-footer {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 14px;
+      text-align: center;
+    }
+
     /* Responsividade */
     @media(max-width: 950px) {
       .hero-section {
         grid-template-columns: 1fr;
-        padding-top: 40px;
+        padding-top: 36px;
+        padding-bottom: 60px;
         min-height: auto;
         gap: 36px;
       }
-      .hero-image { order: 1; }
-      .hero-copy { order: 2; max-width: 100%; }
-      .visits-card { grid-template-columns: 1fr; }
+
+      .hero-visual {
+        order: 1;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .hero-copy {
+        order: 2;
+        max-width: 100%;
+        text-align: left;
+      }
+
+      .hero-highlights {
+        max-width: 100%;
+      }
+
+      .hero-image-canvas {
+        aspect-ratio: 16 / 10;
+      }
+
+      .visits-card {
+        grid-template-columns: 1fr;
+      }
+
       .visits-info {
         padding: 40px 30px;
         border-right: none;
         border-bottom: 1px solid rgba(190, 135, 255, 0.15);
       }
-      .visits-list { padding: 36px 24px; }
-      .inc-dual-view { grid-template-columns: 1fr; gap: 24px; }
+
+      .visits-list {
+        padding: 36px 24px;
+      }
+
+      .inc-dual-view {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
     }
+
     @media(max-width: 760px) {
-      .nav-links { display: none; }
-      .nav { height: 68px; }
-      .nav-cta { padding: 11px 14px; font-size: 11px; }
-      h1 { font-size: 3.2rem; }
-      .feature-grid, .hotel-grid, .price-grid { grid-template-columns: 1fr; }
-      .route-card { grid-template-columns: 1fr; text-align: left; padding: 28px; }
-      .city:last-child { text-align: left; }
-      .flight { transform: rotate(90deg); width: 30px; }
-      .price-card { padding: 30px 24px; }
-      .partner-box { padding: 38px 20px; }
-      .partner-names { flex-direction: column; gap: 16px; }
-      section { padding-top: 70px; padding-bottom: 70px; }
-      footer { flex-direction: column; gap: 12px; }
-      .inclusion-header { flex-direction: column; align-items: flex-start; }
-      .inclusion-tabs { width: 100%; }
-      .inc-tab-btn { flex: 1; text-align: center; padding: 8px 10px; font-size: 11px; }
-      .inc-items-grid { grid-template-columns: 1fr; }
+      .nav-links {
+        display: none;
+      }
+
+      .nav {
+        height: 68px;
+      }
+
+      .nav-cta {
+        padding: 11px 14px;
+        font-size: 11px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.6rem, 9vw, 3.6rem);
+      }
+
+      .hero-badge {
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 6px 12px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-btn-primary,
+      .hero-btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-highlights {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        padding: 16px;
+      }
+
+      .highlight-sep {
+        display: none;
+      }
+
+      .feature-grid,
+      .hotel-grid,
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .route-card {
+        grid-template-columns: 1fr;
+        text-align: left;
+        padding: 28px;
+      }
+
+      .city:last-child {
+        text-align: left;
+      }
+
+      .flight {
+        transform: rotate(90deg);
+        width: 30px;
+      }
+
+      .price-card {
+        padding: 30px 24px;
+      }
+
+      .partner-box {
+        padding: 38px 20px;
+      }
+
+      .partner-names {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .inclusion-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .inclusion-tabs {
+        width: 100%;
+      }
+
+      .inc-tab-btn {
+        flex: 1;
+        text-align: center;
+        padding: 8px 10px;
+        font-size: 11px;
+      }
+
+      .inc-items-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
   <header class="nav">
     <a class="brand" href="#inicio">CATALISA<span>41</span></a>
@@ -854,25 +1518,73 @@
       <a href="#investimento">Investimento</a>
       <a href="#parceria">Parceria</a>
     </nav>
-    <a class="nav-cta track-contact" href="https://wa.me/5511911083333?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20Fronteira%20de%20Negócios." target="_blank" rel="noopener">Tenho interesse ↗</a>
+    <a class="nav-cta track-contact"
+      href="https://wa.me/5511911083333?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20Fronteira%20de%20Negócios."
+      target="_blank" rel="noopener">Tenho interesse ↗</a>
   </header>
 
   <main id="inicio">
     <!-- Hero -->
     <div class="hero-section">
       <section class="hero-copy">
-        <div class="eyebrow">Edição Paraguai · 2026</div>
-        <h1>Fronteira<br><span>de Negócios</span></h1>
-        <p class="lead">Uma imersão empresarial para quem quer conhecer o país, ampliar horizontes e construir negócios sem fronteiras.</p>
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          <span class="badge-edition">16 a 21 de Outubro · 2026</span>
+          <span class="badge-sep">•</span>
+          <span class="badge-highlight">Missão Empresarial VIP</span>
+        </div>
+        <h1 class="hero-title">Fronteira<br><span class="hero-title-highlight">de Negócios</span></h1>
+        <p class="hero-lead">Uma imersão empresarial exclusiva para quem quer conhecer o país, ampliar horizontes
+          estratégicos e construir negócios sem fronteiras.</p>
         <div class="hero-actions">
-          <a class="button track-contact" href="https://wa.me/5511911083333?text=Olá!%20Quero%20garantir%20meu%20interesse%20na%20Fronteira%20de%20Negócios." target="_blank" rel="noopener">Garantir meu interesse ↗</a>
-          <a class="button secondary" href="#experiencia">Explorar a jornada ↓</a>
+          <a class="hero-btn-primary track-contact"
+            href="https://wa.me/5511911083333?text=Olá!%20Quero%20garantir%20minha%20vaga%20na%20Fronteira%20de%20Negócios."
+            target="_blank" rel="noopener">
+            <span>Garantir minha vaga</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+          <a class="hero-btn-secondary" href="#experiencia">
+            <span>Explorar a jornada</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
+        </div>
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <div class="highlight-val">16 a 21 Out</div>
+            <div class="highlight-lbl">Data da Imersão</div>
+          </div>
+          <div class="highlight-sep"></div>
+          <div class="highlight-item">
+            <div class="highlight-val">5+ Visitas</div>
+            <div class="highlight-lbl">Grandes Empresas</div>
+          </div>
+          <div class="highlight-sep"></div>
+          <div class="highlight-item">
+            <div class="highlight-val">C-Level</div>
+            <div class="highlight-lbl">Networking Bilateral</div>
+          </div>
+          <div class="highlight-sep"></div>
+          <div class="highlight-item">
+            <div class="highlight-val">Logística Inteligente</div>
+            <div class="highlight-lbl">Logística & Hotéis</div>
+          </div>
         </div>
       </section>
 
-      <div class="hero-image" aria-label="Anfitriões da Fronteira de Negócios">
-        <div class="hero-image-frame">
-          <img src="./hero-catalisa41.png" alt="Anfitriões diante da bandeira do Paraguai">
+      <div class="hero-visual" aria-label="Anfitriões da Fronteira de Negócios">
+        <div class="hero-glow-aura"></div>
+        <div class="hero-card-stage">
+          <div class="hero-image-canvas">
+            <img class="hero-main-img" src="./hero-catalisa41.png" alt="Anfitriões diante da bandeira do Paraguai">
+          </div>
         </div>
       </div>
     </div>
@@ -922,13 +1634,15 @@
       <div class="section-label">03 · Hospedagem</div>
       <h2 class="section-title">Duas bases estratégicas.<br><span>Conforto em cada etapa.</span></h2>
       <div class="hotel-grid">
-        <article class="hotel" role="button" tabindex="0" data-gallery="rio" style="--hotel-image:url('./hotels/rio/fachada.png')">
+        <article class="hotel" role="button" tabindex="0" data-gallery="rio"
+          style="--hotel-image:url('./hotels/rio/fachada.png')">
           <small>CIUDAD DEL ESTE</small>
           <h3>Rio Hotel by Bourbon</h3>
           <p>Ambientes modernos, restaurante, bar, academia e localização estratégica para a programação.</p>
           <span class="view">VER ACOMODAÇÕES E ESTRUTURA ↗</span>
         </article>
-        <article class="hotel" role="button" tabindex="0" data-gallery="dazzler" style="--hotel-image:url('./hotels/dazzler/piscina.png')">
+        <article class="hotel" role="button" tabindex="0" data-gallery="dazzler"
+          style="--hotel-image:url('./hotels/dazzler/piscina.png')">
           <small>ASSUNÇÃO</small>
           <h3>Dazzler by Wyndham</h3>
           <p>Estrutura contemporânea com piscina, academia e fácil acesso aos compromissos da imersão.</p>
@@ -943,41 +1657,81 @@
         <div class="visits-info">
           <div class="section-label">04 · Visitas técnicas</div>
           <h2 class="visits-title">Visitas<br><span>técnicas:</span></h2>
-          <p class="visits-desc">Conhecimento que vai além da teoria. Uma imersão em empresas e instituições para entender o mercado, gerar conexões e enxergar novas oportunidades.</p>
+          <p class="visits-desc">Conhecimento que vai além da teoria. Uma imersão em empresas e instituições para
+            entender o mercado, gerar conexões e enxergar novas oportunidades.</p>
         </div>
         <div class="visits-list">
           <div class="visit-item">
             <div class="visit-icon">
               <!-- Embassy -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 10-5 10 5v2H2V7z"/><path d="M4 12v6"/><path d="M9 12v6"/><path d="M15 12v6"/><path d="M20 12v6"/><path d="M2 20h20"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m2 7 10-5 10 5v2H2V7z" />
+                <path d="M4 12v6" />
+                <path d="M9 12v6" />
+                <path d="M15 12v6" />
+                <path d="M20 12v6" />
+                <path d="M2 20h20" />
+              </svg>
             </div>
             <span class="visit-name">Embaixada do Brasil em Assunção.</span>
           </div>
           <div class="visit-item">
             <div class="visit-icon">
               <!-- UIP -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="M2 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="M12 22v-4"/><path d="m19.07 19.07-2.83-2.83"/><path d="M22 12h-4"/><path d="m19.07 4.93-2.83 2.83"/><circle cx="12" cy="12" r="3"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4" />
+                <path d="m4.93 4.93 2.83 2.83" />
+                <path d="M2 12h4" />
+                <path d="m4.93 19.07 2.83-2.83" />
+                <path d="M12 22v-4" />
+                <path d="m19.07 19.07-2.83-2.83" />
+                <path d="M22 12h-4" />
+                <path d="m19.07 4.93-2.83 2.83" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
             </div>
             <span class="visit-name">Unión Industrial del Paraguay</span>
           </div>
           <div class="visit-item">
             <div class="visit-icon">
               <!-- Maspy S.A -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
+                <path d="M9 22v-4h6v4" />
+                <path d="M8 6h.01" />
+                <path d="M16 6h.01" />
+                <path d="M8 10h.01" />
+                <path d="M16 10h.01" />
+                <path d="M8 14h.01" />
+                <path d="M16 14h.01" />
+              </svg>
             </div>
             <span class="visit-name">Maspy S.A</span>
           </div>
           <div class="visit-item">
             <div class="visit-icon">
               <!-- Cellshop -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                <path d="M12 18h.01" />
+              </svg>
             </div>
             <span class="visit-name">Cellshop</span>
           </div>
           <div class="visit-item">
             <div class="visit-icon">
               <!-- Mega Plasticos -->
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+                <path d="M17 18h1" />
+                <path d="M12 18h1" />
+                <path d="M7 18h1" />
+              </svg>
             </div>
             <span class="visit-name">Mega Plásticos</span>
           </div>
@@ -991,100 +1745,144 @@
       <h2 class="section-title">Escolha a experiência<br><span>ideal para você.</span></h2>
       <div class="price-grid">
         <article class="price-card">
-          <small>SEM AÉREO</small>
+          <small>SEM AÉREO · TERRESTRE</small>
           <h3>Experiência terrestre</h3>
-          <div class="price">R$ 7.400,00</div>
-          <div class="per">Valor por pessoa · à vista</div>
+
+          <div class="price-options-box" style="margin: 22px 0 16px; display: flex; flex-direction: column; gap: 12px;">
+            <!-- Opção Parcelado -->
+            <div
+              style="background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(190, 135, 255, 0.25); border-radius: 14px; padding: 14px 18px;">
+              <div
+                style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #d8b4fe; margin-bottom: 4px;">
+                PARCELADO</div>
+              <div
+                style="font-family:'Outfit',sans-serif; font-size: 36px; font-weight: 900; letter-spacing: -0.05em; color: #ffffff; line-height: 1;">
+                R$ 7.850,00</div>
+              <div style="font-size: 11px; color: var(--muted); margin-top: 4px; font-weight: 600;">3x no cartão de
+                crédito</div>
+            </div>
+
+            <!-- Opção Pix / Via Pix -->
+            <div
+              style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.32); border-radius: 14px; padding: 14px 18px;">
+              <div
+                style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #10b981; margin-bottom: 4px;">
+                DESCONTO ESPECIAL NO PIX</div>
+              <div
+                style="font-family:'Outfit',sans-serif; font-size: 38px; font-weight: 900; letter-spacing: -0.05em; color: #ffffff; line-height: 1;">
+                R$ 7.400,00</div>
+              <div style="font-size: 11px; color: #a7f3d0; margin-top: 4px; font-weight: 600;">Via Pix</div>
+            </div>
+          </div>
+
           <ul>
-            <li>Hospedagem de alto padrão</li>
-            <li>Café da manhã diário</li>
+            <li>Hospedagem com café da manhã</li>
+            <li>Seguro viagem incluso</li>
+            <li>Translados internos do roteiro</li>
             <li>4 jantares de networking</li>
             <li>Apoio logístico em solo</li>
-            <li>Translados internos do roteiro</li>
             <li>Visitas técnicas institucionais</li>
             <li>Mentoria estratégica</li>
           </ul>
-          <a class="button track-contact" href="https://wa.me/5511911083333?text=Olá!%20Tenho%20interesse%20na%20opção%20sem%20aéreo%20de%20R$%207.400,00." target="_blank" rel="noopener">Quero esta opção ↗</a>
+          <a class="button track-contact"
+            href="https://wa.me/5511911083333?text=Olá!%20Tenho%20interesse%20na%20opção%20sem%20aéreo%20(Pix%20R$%207.400,00%20ou%20Parcelado%20R$%207.850,00)."
+            target="_blank" rel="noopener">Quero esta opção ↗</a>
         </article>
 
         <article class="price-card featured">
           <div class="badge">EXPERIÊNCIA COMPLETA</div>
           <small>COM AÉREO · SAÍDA DE FLORIANÓPOLIS</small>
           <h3>Experiência aérea</h3>
-          <div class="price">R$ 9.497,00</div>
-          <div class="per">Valor por pessoa · à vista</div>
+
+          <div class="price-options-box" style="margin: 22px 0 16px; display: flex; flex-direction: column; gap: 12px;">
+            <!-- Opção Parcelado -->
+            <div
+              style="background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(190, 135, 255, 0.25); border-radius: 14px; padding: 14px 18px;">
+              <div
+                style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #d8b4fe; margin-bottom: 4px;">
+                PARCELADO</div>
+              <div
+                style="font-family:'Outfit',sans-serif; font-size: 36px; font-weight: 900; letter-spacing: -0.05em; color: #ffffff; line-height: 1;">
+                R$ 10.075,00</div>
+              <div style="font-size: 11px; color: var(--muted); margin-top: 4px; font-weight: 600;">3x no cartão de
+                crédito</div>
+            </div>
+
+            <!-- Opção Pix / À vista -->
+            <div
+              style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.32); border-radius: 14px; padding: 14px 18px;">
+              <div
+                style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #10b981; margin-bottom: 4px;">
+                DESCONTO ESPECIAL NO PIX</div>
+              <div
+                style="font-family:'Outfit',sans-serif; font-size: 38px; font-weight: 900; letter-spacing: -0.05em; color: #ffffff; line-height: 1;">
+                R$ 9.497,00</div>
+              <div style="font-size: 11px; color: #a7f3d0; margin-top: 4px; font-weight: 600;">Valor à vista / Pix</div>
+            </div>
+          </div>
+
           <ul>
-            <li>Passagens aéreas completas de ida e volta</li>
+            <li>Passagens aéreas completas de ida e volta (FLN ⇄ PY)</li>
+            <li>Mala despachada inclusa (Aeroporto FLN)</li>
             <li>Recepção e assistência no aeroporto</li>
-            <li>Hospedagem de alto padrão</li>
-            <li>Café da manhã diário</li>
+            <li>Hospedagem com café da manhã</li>
+            <li>Seguro viagem incluso</li>
             <li>4 jantares de networking</li>
-            <li>Bagagem despachada incluída</li>
             <li>Translados internos do roteiro</li>
             <li>Visitas técnicas e mentoria</li>
           </ul>
-          <a class="button track-contact" href="https://wa.me/5511911083333?text=Olá!%20Tenho%20interesse%20na%20opção%20com%20aéreo%20de%20R$%209.497,00." target="_blank" rel="noopener">Quero a experiência completa ↗</a>
+          <a class="button track-contact"
+            href="https://wa.me/5511911083333?text=Olá!%20Tenho%20interesse%20na%20opção%20com%20aéreo%20(Pix%20R$%209.497,00%20ou%20Parcelado%20R$%2010.075,00)."
+            target="_blank" rel="noopener">Quero a experiência completa ↗</a>
         </article>
       </div>
 
       <!-- Detalhamento de Incluso e Não Incluso -->
       <div class="inclusion-wrapper">
-        <div class="inclusion-header">
+        <div class="inclusion-header"
+          style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 16px; margin-bottom: 24px;">
           <div class="inclusion-title">
-            <h4>Transparência no Pacote</h4>
-            <p>Confira exatamente tudo o que compõe sua experiência</p>
-          </div>
-          <div class="inclusion-tabs" role="tablist">
-            <button class="inc-tab-btn active" role="tab" aria-selected="true" data-tab="incluso">✓ O que está incluso</button>
-            <button class="inc-tab-btn" role="tab" aria-selected="false" data-tab="nao-incluso">✕ Não incluso</button>
-            <button class="inc-tab-btn" role="tab" aria-selected="false" data-tab="comparativo">Ver todos</button>
+            <h4 style="font-family:'Outfit',sans-serif; font-size:22px; margin:0 0 4px; font-weight:800; color:#fff;">
+              Detalhamento de Cobertura do Pacote</h4>
+            <p style="color:var(--muted); margin:0; font-size:14px;">Confira exatamente o que está contemplado na
+              imersão e o que fica sob responsabilidade individual</p>
           </div>
         </div>
 
-        <!-- Tab 1: Incluso -->
-        <div class="inc-tab-content active" id="tab-incluso">
-          <div class="inc-items-grid">
-            <div class="inc-item yes"><span class="icon-badge">✓</span> Seguro viagem</div>
-            <div class="inc-item yes"><span class="icon-badge">✓</span> Hospedagem</div>
-            <div class="inc-item yes"><span class="icon-badge">✓</span> Translados internos do roteiro</div>
-            <div class="inc-item yes"><span class="icon-badge">✓</span> 4 jantares de networking</div>
-            <div class="inc-item yes"><span class="icon-badge">✓</span> Apoio logistico</div>
-            <div class="inc-item yes"><span class="icon-badge">✓</span> Visitas técnicas</div>
-            <div class="inc-item yes"><span class="icon-badge">✓</span> Mentoria</div>
-          </div>
-        </div>
-
-        <!-- Tab 2: Não Incluso -->
-        <div class="inc-tab-content" id="tab-nao-incluso">
-          <div class="inc-items-grid">
-            <div class="inc-item no"><span class="icon-badge">✕</span> Despesas pessoas</div>
-            <div class="inc-item no"><span class="icon-badge">✕</span> Documentação de fronteira</div>
-            <div class="inc-item no"><span class="icon-badge">✕</span> Almoços e bebidas</div>
-          </div>
-        </div>
-
-        <!-- Tab 3: Comparativo -->
-        <div class="inc-tab-content" id="tab-comparativo">
-          <div class="inc-dual-view">
-            <div>
-              <h5 class="inc-col-title yes">✓ Itens Inclusos na Missão</h5>
-              <div class="inc-items-grid" style="grid-template-columns: 1fr;">
-                <div class="inc-item yes"><span class="icon-badge">✓</span> Seguro viagem</div>
-                <div class="inc-item yes"><span class="icon-badge">✓</span> Hospedagem</div>
-                <div class="inc-item yes"><span class="icon-badge">✓</span> Translados internos do roteiro</div>
-                <div class="inc-item yes"><span class="icon-badge">✓</span> 4 jantares de networking</div>
-                <div class="inc-item yes"><span class="icon-badge">✓</span> Apoio logistico</div>
-                <div class="inc-item yes"><span class="icon-badge">✓</span> Visitas técnicas</div>
-                <div class="inc-item yes"><span class="icon-badge">✓</span> Mentoria</div>
-              </div>
+        <div class="inc-dual-view" style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+          <div>
+            <h5 class="inc-col-title yes"
+              style="color:#10b981; font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; margin:0 0 16px; display:flex; align-items:center; gap:8px;">
+              <span
+                style="width:24px; height:24px; border-radius:50%; background:rgba(16,185,129,0.2); color:#10b981; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:900;">✓</span>
+              O QUE ESTÁ INCLUSO
+            </h5>
+            <div class="inc-items-grid" style="display:grid; grid-template-columns: 1fr; gap:10px;">
+              <div class="inc-item yes"><span class="icon-badge">✓</span> Seguro viagem</div>
+              <div class="inc-item yes"><span class="icon-badge">✓</span> Hospedagem com café da manhã</div>
+              <div class="inc-item yes"><span class="icon-badge">✓</span> Translados internos do roteiro</div>
+              <div class="inc-item yes"><span class="icon-badge">✓</span> 4 jantares de networking</div>
+              <div class="inc-item yes"><span class="icon-badge">✓</span> Apoio logístico</div>
+              <div class="inc-item yes"><span class="icon-badge">✓</span> Visitas técnicas</div>
+              <div class="inc-item yes"><span class="icon-badge">✓</span> Mentoria</div>
+              <div class="inc-item yes"><span class="icon-badge">✓</span> Mala despachada inclusa (Voo saindo do
+                aeroporto de FLN — Opção com aéreo)</div>
             </div>
-            <div>
-              <h5 class="inc-col-title no">✕ Não Incluso</h5>
-              <div class="inc-items-grid" style="grid-template-columns: 1fr;">
-                <div class="inc-item no"><span class="icon-badge">✕</span> Despesas pessoas</div>
-                <div class="inc-item no"><span class="icon-badge">✕</span> Documentação de fronteira</div>
-                <div class="inc-item no"><span class="icon-badge">✕</span> Almoços e bebidas</div>
-              </div>
+          </div>
+          <div>
+            <h5 class="inc-col-title no"
+              style="color:#f43f5e; font-family:'Outfit',sans-serif; font-size:16px; font-weight:800; margin:0 0 16px; display:flex; align-items:center; gap:8px;">
+              <span
+                style="width:24px; height:24px; border-radius:50%; background:rgba(244,63,94,0.18); color:#f43f5e; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:900;">✕</span>
+              NÃO INCLUSO
+            </h5>
+            <div class="inc-items-grid" style="display:grid; grid-template-columns: 1fr; gap:10px;">
+              <div class="inc-item no"><span class="icon-badge">✕</span> Despesas pessoais (frigobar, telefonemas,
+                lavanderia, compras)</div>
+              <div class="inc-item no"><span class="icon-badge">✕</span> Documentação de fronteira</div>
+              <div class="inc-item no"><span class="icon-badge">✕</span> Refeições não listadas nos inclusos</div>
+              <div class="inc-item no"><span class="icon-badge">✕</span> Bebidas</div>
+              <div class="inc-item no"><span class="icon-badge">✕</span> Gorjetas</div>
             </div>
           </div>
         </div>
@@ -1096,11 +1894,13 @@
       <div class="partner-box">
         <div class="section-label">Uma realização conjunta</div>
         <div class="partner-names">
+          <img src="./partners/catalisa41.png" alt="Catalisa41" style="filter: brightness(0) invert(1);">
+          <i>×</i>
           <img src="./partners/ultravel.png" alt="Ultravel Viagens">
           <i>×</i>
           <img src="./partners/mais-viagens.png" alt="Mais Viagens">
         </div>
-        <p>Duas marcas unidas para entregar estratégia, cuidado, logística e uma experiência empresarial memorável.</p>
+        <p>Três marcas unidas para entregar estratégia, cuidado, logística e uma experiência empresarial memorável.</p>
       </div>
     </section>
 
@@ -1109,7 +1909,9 @@
       <div class="section-label">Vagas limitadas</div>
       <h2 class="section-title">Seu próximo movimento pode começar <span>do outro lado da fronteira.</span></h2>
       <p>Fale com a equipe responsável e receba todos os detalhes da missão empresarial.</p>
-      <a class="button track-contact" href="https://wa.me/5511911083333?text=Olá!%20Quero%20participar%20da%20Fronteira%20de%20Negócios." target="_blank" rel="noopener">Falar no WhatsApp ↗</a>
+      <a class="button track-contact"
+        href="https://wa.me/5511911083333?text=Olá!%20Quero%20participar%20da%20Fronteira%20de%20Negócios."
+        target="_blank" rel="noopener">Falar no WhatsApp ↗</a>
     </section>
   </main>
 
@@ -1130,6 +1932,45 @@
     </div>
   </div>
 
+  <!-- Popup Captura de Lead (Primeira Visita) -->
+  <div class="lead-popup" id="firstVisitPopup" aria-hidden="true">
+    <div class="lead-popup-box" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+
+      <div class="lead-popup-tag">
+        <span>⚡ EDIÇÃO PARAGUAI 2026</span>
+      </div>
+
+      <h3 class="lead-popup-title" id="popupTitle">Receba a Apresentação <span>Exclusiva</span></h3>
+      <p class="lead-popup-desc">Preencha seus dados para garantir o interesse e receber o itinerário detalhado e
+        condições especiais da imersão empresarial.</p>
+
+      <form class="lead-popup-form" id="leadForm">
+        <div class="lead-field">
+          <label for="leadNome">Nome Completo</label>
+          <input type="text" id="leadNome" placeholder="Seu nome e sobrenome" required>
+        </div>
+
+        <div class="lead-field">
+          <label for="leadWhats">WhatsApp / Telefone</label>
+          <input type="tel" id="leadWhats" placeholder="(00) 00000-0000" required>
+        </div>
+
+        <button type="submit" class="lead-submit-btn">
+          <span>Receber Material & Detalhes</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+
+      <div class="lead-popup-footer">
+        🔒 Seus dados estão 100% seguros. Não enviamos SPAM.
+      </div>
+    </div>
+  </div>
+
   <script>
     // Rastreamento GA4 / DataLayer
     function trackEvent(name, data) {
@@ -1143,8 +1984,8 @@
       }
     }
 
-    document.querySelectorAll('.track-contact').forEach(function(link){
-      link.addEventListener('click', function(){
+    document.querySelectorAll('.track-contact').forEach(function (link) {
+      link.addEventListener('click', function () {
         trackEvent('generate_lead', {
           event_category: 'engagement',
           channel: 'whatsapp',
@@ -1187,13 +2028,13 @@
       if (!data) return;
       galleryTitle.textContent = data.title;
       thumbs.innerHTML = '';
-      data.images.forEach(function(src, i) {
+      data.images.forEach(function (src, i) {
         const b = document.createElement('button');
         const im = document.createElement('img');
         im.src = src;
         im.alt = data.title + ' — foto ' + (i + 1);
         b.appendChild(im);
-        b.onclick = function() {
+        b.onclick = function () {
           mainImg.src = src;
           mainImg.alt = im.alt;
           thumbs.querySelectorAll('button').forEach(x => x.classList.remove('active'));
@@ -1218,9 +2059,9 @@
       document.body.style.overflow = '';
     }
 
-    document.querySelectorAll('[data-gallery]').forEach(function(card) {
+    document.querySelectorAll('[data-gallery]').forEach(function (card) {
       card.onclick = () => openGallery(card.dataset.gallery);
-      card.onkeydown = function(e) {
+      card.onkeydown = function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           openGallery(card.dataset.gallery);
@@ -1229,8 +2070,8 @@
     });
 
     gallery.querySelector('.gallery-close').onclick = closeGallery;
-    gallery.onclick = function(e) { if (e.target === gallery) closeGallery(); };
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeGallery(); });
+    gallery.onclick = function (e) { if (e.target === gallery) closeGallery(); };
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeGallery(); });
 
     // Alternância de Abas: Incluso / Não Incluso / Comparativo
     const tabButtons = document.querySelectorAll('.inc-tab-btn');
@@ -1241,7 +2082,7 @@
     };
 
     tabButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function () {
         const target = this.dataset.tab;
         tabButtons.forEach(b => {
           b.classList.remove('active');
@@ -1265,6 +2106,99 @@
         }
       });
     });
+
+    // ==========================================================================
+    // Lógica do Popup de Captura de Leads (Primeira Visita & Google Sheets)
+    // ==========================================================================
+    const GOOGLE_SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby3y3Tlaq8Gml_N0sB7wAskpK8Qo1pIqCVq6oC6x1a1t0hfAmNmhS0gsqBkKhfZA-Jv/exec'; // Insira aqui a URL do Web App do Google Apps Script
+
+    const leadPopup = document.getElementById('firstVisitPopup');
+    const leadForm = document.getElementById('leadForm');
+    const leadWhatsInput = document.getElementById('leadWhats');
+
+    // Máscara automática de WhatsApp
+    if (leadWhatsInput) {
+      leadWhatsInput.addEventListener('input', function (e) {
+        let v = e.target.value.replace(/\D/g, '');
+        if (v.length > 11) v = v.substring(0, 11);
+        if (v.length > 6) {
+          e.target.value = `(${v.substring(0, 2)}) ${v.substring(2, 7)}-${v.substring(7)}`;
+        } else if (v.length > 2) {
+          e.target.value = `(${v.substring(0, 2)}) ${v.substring(2)}`;
+        } else if (v.length > 0) {
+          e.target.value = `(${v.substring(0)}`;
+        }
+      });
+    }
+
+    // Exibir Popup apenas na primeira visita (após 2.5s)
+    function checkFirstVisitPopup() {
+      const submitted = localStorage.getItem('catalisa41_lead_submitted');
+
+      if (!submitted) {
+        if (leadPopup) {
+          leadPopup.classList.add('active');
+          leadPopup.setAttribute('aria-hidden', 'false');
+        }
+      }
+    }
+
+    function closePopup() {
+      if (leadPopup) {
+        leadPopup.classList.remove('active');
+        leadPopup.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    // Submissão do formulário de Lead
+    if (leadForm) {
+      leadForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const nome = document.getElementById('leadNome').value.trim();
+        const whatsapp = document.getElementById('leadWhats').value.trim();
+
+        if (!nome || !whatsapp) return;
+
+        const payload = {
+          nome: nome,
+          whatsapp: whatsapp,
+          origem: 'Catalisa41 - Landing Page',
+          data: new Date().toLocaleString('pt-BR')
+        };
+
+        // Evento de Analytics / Meta Pixel
+        trackEvent('generate_lead', {
+          event_category: 'popup_lead',
+          lead_name: nome,
+          channel: 'first_visit_popup'
+        });
+
+        // Envio para Google Sheets (se configurado)
+        if (GOOGLE_SHEETS_WEBHOOK_URL) {
+          fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).catch(err => console.error('Erro no webhook:', err));
+        }
+
+        // Marcar como enviado no navegador do visitante
+        localStorage.setItem('catalisa41_lead_submitted', 'true');
+
+        // Confirmação visual
+        const submitBtn = leadForm.querySelector('.lead-submit-btn');
+        submitBtn.style.background = '#10b981';
+        submitBtn.innerHTML = '✓ Cadastro Realizado com Sucesso!';
+
+        setTimeout(() => {
+          closePopup();
+        }, 1200);
+      });
+    }
+
+    checkFirstVisitPopup();
   </script>
 </body>
+
 </html>

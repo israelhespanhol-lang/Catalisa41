@@ -1,0 +1,31 @@
+name: Deploy to HostGator via FTP
+
+on:
+  push:
+    branches:
+      - main
+      - master # Adicionado master caso seja o nome da sua branch principal
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Obter código mais recente
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sincronizar arquivos para HostGator
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: ./catalisa41/
+        # Excluir pastas que não precisam ir pro servidor (opcional)
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/.github/**
+          site.zip
+          *.bat
+          *.ps1
